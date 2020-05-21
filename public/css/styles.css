@@ -1,14 +1,75 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: aliceblue;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-img{
-    position: relative;
-    margin: 0 auto 0 auto;
+/* Custom Properties */
+:root{
+    --ff-primary: 'Source Code Pro', monospace;
+    --ff-secundary: 'Roboto Mono', monospace;
+
+    --fw-reg: 400;
+    --fw-bold: 600;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+
+    --clr--accent: darkred;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,0.15);
 }
+
+@media (min-width: 800px){
+    :root{
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+/* General Styles */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;    
+}
+
+/* Styles for the Header Section */
 
 .header{
     text-align: center;
+    background-color: rgba(255, 242, 58, 0.8);
+}
+
+.logo{
+    width: 30%;
+    position: relative;
+    margin: 2rem auto 1.5rem auto;    
+}
+
+.btn{
+    display: inline-block;
+    background-color: white;
+    border-radius: 4rem;
+    border-color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 9.5rem;
+}
+
+.btn:hover{
+    color: white;
+    background-color: rgba(9, 9, 167, 0.966);
 }
