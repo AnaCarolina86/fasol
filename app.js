@@ -17,6 +17,31 @@ app.get("/", function(req, res){
   
 });
 
+app.get("/nossa-historia", function(req, res){
+
+    res.render("nossa-historia");
+});
+
+app.get("/contato", function(req, res){
+
+    res.render("contato");
+});
+
+app.get("/fitness", function(req, res){
+
+    res.render("fitness");
+});
+
+app.get("/personalizado", function(req, res){
+
+    res.render("personalizado");
+});
+
+app.get("/praia", function(req, res){
+
+    res.render("praia");
+});
+
 
 
 
