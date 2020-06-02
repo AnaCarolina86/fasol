@@ -6,19 +6,28 @@
 }
 
 /* Custom Properties */
+@font-face{
+    font-family: 'MYRIADPRO-BOLDCONDIT';
+    src: url('/fonts/MYRIADPRO-BOLDCONDIT.OTF') format("opentype");    
+    font-weight: 700;
+    font-style: normal;
+}
+
 :root{
-    --ff-primary: 'Source Code Pro', monospace;
-    --ff-secundary: 'Roboto Mono', monospace;
+    --ff-primary:  myriad-pro, sans-serif;
+    --ff-secundary:  myriad-pro-condensed, sans-serif;
+    --ff-myriadbold: 'MYRIADPRO-BOLDCONDIT';
 
     --fw-reg: 400;
-    --fw-bold: 600;
+    --fw-bold: 700;
 
     --clr-light: #fff;
-    --clr-dark: #303030;
-
-    --clr--accent: rgba(255, 242, 58, 0.8);
-    --clr--accent2: rgb(243, 161, 9);
-
+    --clr-blue: rgb(28, 87, 124);
+    --clr-light-blue: rgb(147, 189, 209);
+    --clr-gray: rgb(160, 169, 173);
+    --clr-yellow: rgb(243, 225, 135);
+    --clr-light-yellow: rgb(241, 225, 159);
+    
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
@@ -33,7 +42,7 @@
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
+        --fs-body: 1.2rem;
     }
 }
 /* General Styles */
@@ -44,46 +53,93 @@ html{
 
 body{
     margin: 0;
-    padding: 0;    
-}
-
-section{
-    padding: 4.75em 1.75em;
-}
-
-a{
+    padding: 0;   
+    color: var(--clr-blue);
+    font-family: var(--ff-primary);
 }
 
 /* Typography */
 
-/* Buttons */
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
 
+h1{ font-size: var(--fs-h1); }
+h2{ font-size: var(--fs-h2); }
+h3{ font-size: var(--fs-h3); }
+
+/* Buttons */
+.buttons-header{
+    margin-bottom: 0;
+}
 .btn{
-    display: inline-block;
-    background-color: white;
-    border-radius: 4em;
-    border-color: white;
-    cursor: pointer;
-    text-transform: uppercase;
-    width: 9.5em;
+    color: var(--clr-light-blue);
+    background-color: var(--clr-light);
+    cursor: pointer;    
+    line-height: 0.9rem;
 }
 
 .btn:hover{
-    color: white;
-    background-color: rgba(9, 9, 167, 0.966);
+    color: var(--clr-blue);
+    background-color: var(--clr-light);
+    text-decoration: none;
+}
+
+.btn a{
+    text-decoration: none;
+}
+
+.input-button{
+    color: var(--clr-gray);
+    background-image: url('/images/search-solid.svg'); 
+    background-repeat: no-repeat; 
+    background-position: 2px 4px;  
+    background-size: 9%;  
+    margin-bottom: 0;
+    line-height: 0.4rem;
+    position: relative;
+    bottom: 0;
+}
+.input-button:active{
+    background-image: url('/images/search-solid.svg'); 
+    background-repeat: no-repeat; 
+    background-position: 2px 4px;  
+    background-size: 9%; 
+    border: none; 
+}
+
+.input-button, .btn{
+    display: inline-block;
+    border: none;       
+    font-family: var(--ff-secundary);
+    font-size: var(--fs-body);
+    text-align: center;
+    text-transform: uppercase;
+    width: 9.4em;
+    border-radius: 4em;
+    border-color: white;
 }
 
 /* Styles for the Header Section */
 
 .header{
     text-align: center;
-    background-color: rgba(255, 242, 58, 0.8);
+    background-color: var(--clr-yellow) ;
+    margin: 0;
+    padding: 0;
+}
+.header_logo{
+    width: 50%;
+    position: relative;
+    margin: 0.1em auto 0.3em auto;
 }
 
 .logo{
-    width: 50%;
-    position: relative;
-    margin: 1.5em auto 1em auto;    
+    width: 15%;
+    margin: 0;
 }
 
 .nav{
@@ -209,6 +265,38 @@ a{
         display: none;
     }
 }
+
+/* Home Page Styles */
+.home-section .item{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+.images{
+    margin: 0;
+    z-index: 1;     
+}
+
+.image{    
+    max-width: 84.3em; 
+    border: solid white 1px;    
+}
+
+.title-home{
+    z-index: 1000;
+    position: absolute;
+    width: 70%;
+    bottom: 1%;
+    left: 25%;
+    -webkit-text-stroke: 2px var(--clr-blue);
+    color: var(--clr-light);
+}
+
 
 /* Footer Styles */
 

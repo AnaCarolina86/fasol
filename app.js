@@ -27,9 +27,9 @@ app.get("/contato", function(req, res){
     res.render("contato");
 });
 
-app.get("/fitness", function(req, res){
+app.get("/blog", function(req, res){
 
-    res.render("fitness");
+    res.render("blog");
 });
 
 app.get("/personalizado", function(req, res){
