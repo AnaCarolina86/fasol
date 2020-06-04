@@ -405,17 +405,17 @@ h3{ font-size: var(--fs-h3); }
 }
 
 /* Blog Styles */
-
-.blog{ margin: 2rem; }
+.blog{ padding-bottom: 20rem;}
 
 .titles-blog{
-    margin-top: 15em;
-    margin-left: 5em;
-    position: relative;
+    position: relative;   
+    left: 10rem;
+    top: 16rem; 
 }
 
 .title-blog, .subtitle-blog{
-    font-size: var(--fs-h3);    
+    font-size: 1.8rem;    
+    width: 37rem;
 }
 
 .title-blog{ color: var(--clr-blue); }
@@ -425,8 +425,61 @@ h3{ font-size: var(--fs-h3); }
 .image-blog{
     position: relative;
     float: right;
-    right: 5rem;
+    top: 6rem;
+    right: 13rem;
     width: 20%;
+}
+
+/* Contact Styles */
+.form-contact{ 
+    width: 55%;
+    position: relative;
+    float: left;
+}
+
+.title-contact{ margin: 2rem; }
+
+.form-contact input{
+    background-color: var(--clr-light-yellow);
+    border: none;
+    border-radius: 12px;
+    color: var(--clr-blue);
+    margin: 1rem;
+}
+
+.form-contact ::placeholder{
+    color: var(--clr-blue);
+    font-size: var(--fs-h3);
+    text-align: left;
+    text-indent: 0.5em;
+}
+
+.name-contact, .email-contact,
+.number-contact, .subject-contact{
+    width: 20em;
+    height: 2em;
+}
+
+textarea{
+    font-size: var(--fs-h3);
+    text-align: left;
+    width: 28em;
+    background-color: var(--clr-light-yellow);
+    border: none;
+    border-radius: 12px;
+    color: var(--clr-blue);
+    margin: 1rem;   
+}
+
+.media{
+    width: 40%;
+    margin: 2em;
+    position: relative;
+    float: right;
+}
+
+.adress{
+    width: 100%;
 }
 
 
@@ -434,6 +487,9 @@ h3{ font-size: var(--fs-h3); }
 /* Footer Styles */
 
 footer{
+   
     background-color: darkblue;
     color: var(--clr-light);
+    margin: 0;
+    padding: 0;
 }
