@@ -17,6 +17,7 @@
     --ff-primary:  myriad-pro, sans-serif;
     --ff-secundary:  myriad-pro-condensed, sans-serif;
     --ff-myriadbold: 'MYRIADPRO-BOLDCONDIT';
+    --ff-test: 'Roboto', sans-serif;;
 
     --clr-light: #fff;
     --clr-blue: rgb(28, 87, 124);
@@ -24,7 +25,7 @@
     --clr-gray: rgb(160, 169, 173);
     --clr-yellow: rgb(243, 225, 135);
     --clr-light-yellow: rgb(241, 225, 159);
-    
+        
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
@@ -51,12 +52,10 @@ html{
 body{
     margin: 0;
     padding: 0;   
-    color: var(--clr-blue);
     font-family: var(--ff-primary);
 }
 
 /* Typography */
-
 h1,
 h2,
 h3 {
@@ -73,32 +72,39 @@ h3{ font-size: var(--fs-h3); }
     margin-bottom: 0;
 }
 .btn{
-    color: var(--clr-light-blue);
+    color: var(--clr-blue);
     background-color: var(--clr-light);
     cursor: pointer;    
     line-height: 0.9rem;
 }
 
 .btn:hover{
-    color: var(--clr-blue);
+    color: var(--clr-light-blue);
     background-color: var(--clr-light);
     text-decoration: none;
 }
 
 .btn a{
     text-decoration: none;
+    font-family: var(--ff-test);
+    font-weight: 400;
 }
 
 .input-button{
     color: var(--clr-gray);
+    font-family: var(--ff-test);
+    font-weight: 400;
     background-image: url('/images/search-solid.svg'); 
     background-repeat: no-repeat; 
-    background-position: 2px 4px;  
-    background-size: 9%;  
-    margin-bottom: 0;
-    line-height: 0.4rem;
+    background-position: left;  
+    background-size: 8%;  
+    margin-bottom: 0;    
+    padding-bottom: 5px;
+    padding-top: 0;
     position: relative;
     bottom: 0;
+    height: 1.6rem;
+    text-align: center;
 }
 .input-button:active{
     background-image: url('/images/search-solid.svg'); 
@@ -124,7 +130,7 @@ h3{ font-size: var(--fs-h3); }
 
 .header{
     text-align: center;
-    background-color: var(--clr-yellow) ;
+    background-color: var(--clr-yellow);
     margin: 0;
     padding: 0;
 }
@@ -141,7 +147,7 @@ h3{ font-size: var(--fs-h3); }
 
 .nav{
     position: fixed;   
-    background: var(--clr-dark);
+    background: var(--clr-light-blue);
     color: var(--clr-light);
     top: 0;
     bottom: 0;
@@ -170,9 +176,7 @@ h3{ font-size: var(--fs-h3); }
     text-decoration: none;
 }
 
-.nav_link:hover{
-    color: var(--clr--accent);
-}
+.nav_link:hover{ color: var(--clr--accent); }
 
 .nav-toggle{
     padding: .5em;
@@ -185,25 +189,17 @@ h3{ font-size: var(--fs-h3); }
     z-index: 1000;
 }
 
-.nav-open .nav{
-    transform: translateX(75em);    
-}
+.nav-open .nav{ transform: translateX(75em); }
 
-.nav-open .nav-toggle{
-    position: fixed;
-}
+.nav-open .nav-toggle{ position: fixed; }
 
-.nav-open .hamburger{
-    transform: rotate(.625turn);
-}
+.nav-open .hamburger{ transform: rotate(.625turn); }
 
 .nav-open .hamburger::before{
     transform: rotate(90deg) translateX(-6px);
 }
 
-.nav-open .hamburger::after{
-    opacity: 0;
-}
+.nav-open .hamburger::after{ opacity: 0; }
 
 .hamburger{
     display: block;
@@ -213,7 +209,7 @@ h3{ font-size: var(--fs-h3); }
 .hamburger,
 .hamburger::before,
 .hamburger::after{
-    background: var(--clr--accent2);
+    background: var(--clr-gray);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -245,18 +241,6 @@ h3{ font-size: var(--fs-h3); }
     }
 }
 
-@media screen and (max-width: 1000px) and (min-width: 425px){
-    .nav-open .nav{
-        transform: translateX(70%);    
-    }
-}
-
-@media(max-width: 425px){
-    .nav-open .nav{
-        transform: translateX(55%);    
-    }
-}
-
 @media(max-width: 930px){
     .buttons-header{
         display: none;
@@ -264,38 +248,48 @@ h3{ font-size: var(--fs-h3); }
 }
 
 /* Home Page Styles */
-.home-section .item{
+.home-section, .container-fluid, .item, .image-background{
     margin: 0;
     padding: 0;
 }
-.container-fluid{
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-}
 
-.images{
-    margin: 0;
-    z-index: 1;     
-}
+.image-background{ z-index: 1; }
 
-.image{    
-    max-width: 84.3em; 
-    border: solid white 1px;    
-}
+.image-home{ max-width: 84.3em; }
 
 .title-home{
     z-index: 1000;
     position: absolute;
     width: 70%;
-    bottom: 1%;
+    bottom: 6.5%;
     left: 25%;
     -webkit-text-stroke: 2px var(--clr-blue);
     color: var(--clr-light);
 }
 
-/* History Styles */
+.circle1, .circle2{
+    background-color: var(--clr-blue);
+    border-radius: 2rem;
+    position: absolute;
+    bottom: -5rem;
+    left: 48%;
+    right: 40%;    
+    z-index: 1000;
+}
 
+.circle1{ 
+    width: 2.1rem;
+    height: 2.1rem;
+    border: solid 0.2rem var(--clr-light);
+}
+.circle2{ 
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 2.5rem;
+    border: solid 0.1rem var(--clr-light);
+}
+
+/* History Styles */
 .history-section{
     border: 0.4rem solid var(--clr-blue);
     outline: 0.4rem solid orange;
@@ -318,12 +312,21 @@ h3{ font-size: var(--fs-h3); }
     left: 20rem;
     margin: 1rem;
     width: 70%;
-    font-family: var(--ff-secundary);
+    font-family: var(--ff-myriadbold);
+    color: var(--clr-blue);
 }
 
 .paragraph-history{
     margin-bottom: 3.5rem;
     font-size: 2.25rem;
+}
+
+/* Moda Praia Styles */
+.praia-section{
+    padding: 5rem;
+    margin: 0;
+    color: var(--clr-blue);
+    font-family: var(--ff-myriadbold);
 }
 
 /* Personalizado Styles */
@@ -379,7 +382,14 @@ h3{ font-size: var(--fs-h3); }
     border-radius: 10px;  
     margin-bottom: 4rem; 
     margin-left: 0.75rem;
-    margin-right: 0.75rem;    
+    margin-right: 0.75rem;
+    color: var(--clr-blue);    
+}
+
+.input-form::placeholder{
+    color: var(--clr-blue);
+    font-size: var(--fs-h3);
+    text-align: center;
 }
 
 .name-form{ width: 75%; }
@@ -401,11 +411,12 @@ h3{ font-size: var(--fs-h3); }
     width: 15%;
     border: none;
     border-radius: 10px;
-    position: relative;       
+    position: relative;
+    left: 42%;       
 }
 
 /* Blog Styles */
-.blog{ padding-bottom: 20rem;}
+.blog{ padding-bottom: 25rem;}
 
 .titles-blog{
     position: relative;   
@@ -431,6 +442,10 @@ h3{ font-size: var(--fs-h3); }
 }
 
 /* Contact Styles */
+.contact{
+    padding-bottom: 25rem;
+}
+
 .form-contact{ 
     width: 55%;
     position: relative;
@@ -486,10 +501,26 @@ textarea{
 
 /* Footer Styles */
 
-footer{
-   
-    background-color: darkblue;
-    color: var(--clr-light);
-    margin: 0;
-    padding: 0;
+footer{   
+    background-color: var(--clr-light);
+    margin: 1rem;
+    padding: 1.5rem;   
 }
+
+.icons-media{
+    text-align: center;   
+    position: relative;
+    float: bottom;    
+}
+
+.social-icon{
+    font-size: 2em;    
+    color: var(--clr-gray);
+    margin: 0.5rem;
+}
+
+.social-icon:hover{
+    color: var(--clr-yellow);
+}
+
+.link-social-media:hover{ text-decoration: none; }
