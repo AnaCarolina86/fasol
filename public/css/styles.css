@@ -53,6 +53,7 @@ body{
     margin: 0;
     padding: 0;   
     font-family: var(--ff-primary);
+    color: var(--clr-blue);
 }
 
 /* Typography */
@@ -248,46 +249,71 @@ h3{ font-size: var(--fs-h3); }
 }
 
 /* Home Page Styles */
-.home-section, .container-fluid, .item, .image-background{
+.home-section{
     margin: 0;
+    margin-bottom: 3.5rem;
     padding: 0;
+    height: 29rem;
 }
 
-.image-background{ z-index: 1; }
+.image-home{ 
+    position: relative;
+    z-index: 1;
+    max-width: 84.3em; 
+    opacity: 0.6;
+}
 
-.image-home{ max-width: 84.3em; }
+.title-home, .subtitle-home{
+    z-index: 1000;
+    position: relative;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;    
+}
 
 .title-home{
-    z-index: 1000;
-    position: absolute;
-    width: 70%;
-    bottom: 6.5%;
-    left: 25%;
-    -webkit-text-stroke: 2px var(--clr-blue);
+    bottom: 20rem;    
+    -webkit-text-stroke: 2.5px var(--clr-blue);
     color: var(--clr-light);
+    font-size: 6em;  
+    box-shadow: var(--bs);  
+}
+
+.subtitle-home{
+    bottom: 18rem;
+    color: var(--clr-light-yellow);
+    -webkit-text-stroke: 2px var(--clr-gray);
+    color: var(--clr-light);
+}
+
+.circles{
+    z-index: 1000;
+    width: 4rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: -11.6rem;    
 }
 
 .circle1, .circle2{
     background-color: var(--clr-blue);
     border-radius: 2rem;
-    position: absolute;
-    bottom: -5rem;
-    left: 48%;
-    right: 40%;    
-    z-index: 1000;
+    position: relative;
 }
 
 .circle1{ 
     width: 2.1rem;
     height: 2.1rem;
     border: solid 0.2rem var(--clr-light);
+    float: left;
 }
 .circle2{ 
     width: 1.5rem;
     height: 1.5rem;
-    margin-left: 2.5rem;
     border: solid 0.1rem var(--clr-light);
-}
+    float: right;
+    margin-top: 0.6rem;
+} 
 
 /* History Styles */
 .history-section{
@@ -354,19 +380,27 @@ h3{ font-size: var(--fs-h3); }
     font-size: 2.75rem;
 }
 
-.images-medidas{
-    margin: 3rem 2rem;
+.images-measures{
+    margin: 3rem 0.2rem;
+    font-size: var(--fs-body);
+}
+
+.images-measures input{
+    border-radius: 1rem;
+    width: 6rem;    
 }
 
 .man-mesures{
+    position: relative;
     width: 20%;
-    margin-left: 8rem;
+    float: left;
+    margin-left: 0.1rem;   
 }
 
 .woman-mesures{
-    width: 30%;
     position: relative;
-    right: -25rem;
+    width: 30%;    
+    right: -1rem;    
 }
 
 .form{
@@ -390,6 +424,23 @@ h3{ font-size: var(--fs-h3); }
     color: var(--clr-blue);
     font-size: var(--fs-h3);
     text-align: center;
+}
+
+.height-man-form{
+    z-index: 1000;
+    position: relative;
+    float: left;
+    top: 15rem;
+    left: 0;
+    margin: 0;
+}
+
+.man-height-label{
+    z-index: 1000;
+    position: relative;
+    float: left;
+    left: 4.5rem;
+    top: 13.5rem;
 }
 
 .name-form{ width: 75%; }
@@ -503,7 +554,7 @@ textarea{
 
 footer{   
     background-color: var(--clr-light);
-    margin: 1rem;
+    margin: 0.5rem;
     padding: 1.5rem;   
 }
 

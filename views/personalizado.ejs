@@ -7,14 +7,29 @@
     </section>
 
     <section class="form-section">
-        <h3 class="title-form">Formulário</h3>
-        <div class="images-medidas">
-            <img src="/images/homem-medidas.png" alt="man mesures" class="man-mesures">
-            <img src="/images/mulher-medidas.png" alt="woman mesures" class="woman-mesures">
-        </div>
+        <h3 class="title-form">Formulário</h3>        
 
         <form action="/" method="POST" class="form">
+             <!--Inputs for the images-->
+            <div class="images-measures">
+                <label class="man-height-label" for="man-height">Altura</label>
+                <input class="input-form height-man-form" name="man-height" type="number">
+                <img src="/images/homem-medidas.png" alt="man mesures" class="man-mesures">
+                <label for="man-hip">Quadril</label>
+                <input class="input-form man-hip-form" name="man-hip" type="number">
 
+                <label for="woman-height">Altura</label>
+                <input class="input-form height-woman-form" name="woman-height" type="number">
+                <img src="/images/mulher-medidas.png" alt="woman mesures" class="woman-mesures">
+                <label for="woman-bra">Busto</label>
+                <input class="input-form woman-bra-form" name="woman-bra" type="number">
+                <label for="woman-waist">Cintura</label>
+                <input class="input-form woman-waist-form" name="woman-waist" type="number">
+                <label for="woman-hip">Quadril</label>
+                <input class="input-form woman-hip-form" name="woman-hip" type="number">
+            </div>                   
+                    
+            <!--Inputs for the rest of the form-->
             <label for="nome">Nome Completo:</label>
             <input class="input-form name-form" name="nome" type="text">
 
