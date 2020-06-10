@@ -390,17 +390,17 @@ h3{ font-size: var(--fs-h3); }
     width: 6rem;    
 }
 
-.man-mesures{
+.man-measures{
     position: relative;
     width: 20%;
     float: left;
     margin-left: 0.1rem;   
 }
 
-.woman-mesures{
+.woman-measures{
     position: relative;
     width: 30%;    
-    right: -1rem;    
+    margin-right: -2rem;   
 }
 
 .form{
@@ -410,60 +410,143 @@ h3{ font-size: var(--fs-h3); }
     margin-right: 1.5rem;
 }
 
-.input-form{
-    background-color: var(--clr-light-yellow);
-    border: none;
-    border-radius: 10px;  
-    margin-bottom: 4rem; 
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-    color: var(--clr-blue);    
-}
-
-.input-form::placeholder{
-    color: var(--clr-blue);
-    font-size: var(--fs-h3);
-    text-align: center;
-}
-
-.height-man-form{
+.height-man-input, .man-height-label, .man-hip-input, .man-hip-label{
     z-index: 1000;
     position: relative;
     float: left;
+}
+
+.height-man-input{
     top: 15rem;
     left: 0;
     margin: 0;
 }
 
 .man-height-label{
-    z-index: 1000;
-    position: relative;
-    float: left;
     left: 4.5rem;
     top: 13.5rem;
 }
 
-.name-form{ width: 75%; }
+.man-hip-input{
+    top: 13.5rem;
+    margin: 0;   
+    right: 4rem; 
+}
 
-.email-form, .contact-form{ width: 37%; }
+.man-hip-label{
+    top: 12rem;
+    left: 1rem;
+    margin-bottom: 0;
+}
 
-.number-form{ width: 20%; }
+.man-hip-label, .woman-height-label, .woman-bra-label, .woman-waist-input, 
+.woman-waist-label, .woman-hip-label{
+    margin-bottom: 0;
+}
 
-.pants{ margin-right: 4.5rem;}
+.woman-height-input, .woman-height-label, .woman-bra-input, .woman-bra-label,
+.woman-waist-input, .woman-waist-label, .woman-hip-input, .woman-hip-label{
+    z-index: 1000;
+    position: relative;
+}
 
-.model-form{
-    width: 20%;
+.woman-height-input{    
+    top: 2rem;
+    left: 0;
+}
+
+.woman-height-label{
+    left: 5.5rem;
+    top: 0;
+}
+
+.woman-bra-input{
+    top: -22rem;
+    left: 60rem;
+    margin: 0;
+}
+
+.woman-bra-label{
+    top: -8rem;
+    left: -9rem;
+}
+
+.woman-waist-input, .woman-waist-label, .woman-hip-input, .woman-hip-label{
+    float: right;
+}
+
+.woman-waist-input{
+    margin-left: 0;
+    top: -19.5rem;
+    right: 4rem;
+}
+
+.woman-waist-label{
+    top: -21rem;
+    right: 9rem;
+}
+
+.woman-hip-input{
+    top: -16rem;
+    left: 13rem;
+}
+
+.woman-hip-label{
+    top: -17.5rem;
+    left: 7rem;
+}
+
+.input-form{
+    background-color: var(--clr-light-yellow);
+    border: none;
+    border-radius: 1.5rem;      
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    margin-bottom: 2rem;
+    color: var(--clr-blue);   
+    height: 2.5rem; 
+}
+
+.input-form::placeholder{
+    color: var(--clr-blue);
+    font-size: var(--fs-body);
+    opacity: 0.6;
+    text-align: center;
+}
+
+.fields-form, .name-label, .name-input, .email-label, .email-input,
+.contact-label, .contact-input, .pants-label, .model-image-input{
+    position: relative;
+}
+
+.name{ width: 100%; }
+.name-label{ float: left; }
+.name-input{ width: fit-content; }
+.client-email{ width: 100%; }
+.email-input{ width: fit-content; }
+.contact-input{ width: fit-content; }
+.pants-input{ width: 12rem; }
+.bra-input{ width: 12rem; }
+
+.model-image-input{ 
+    width: fit-content;
+    font-size: 1rem;    
+    top: -0.7rem;
 }
 
 .submit-form{
     color: var(--clr-light);
     text-transform: uppercase;
     background-color: var(--clr-blue);
-    width: 15%;
+    width: 20%;
     border: none;
     border-radius: 10px;
     position: relative;
-    left: 42%;       
+    left: 32rem;      
+}
+
+.submit-form:hover{
+    background-color: var(--clr-light-blue);
 }
 
 /* Blog Styles */
