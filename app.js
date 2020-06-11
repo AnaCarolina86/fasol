@@ -3,6 +3,20 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const _ = require("lodash");
+
+/* -----DataBase----- */
+const mongoose = require("mongoose");
+mongoose.connect('mongodb://localhost:27017/fasolDB', {useNewUrlParser: true, useUnifiedTopology: true });
+
+// Schema
+const postSchema = {
+    title: String,
+    subtitle: String,
+    content: String
+};
+// Model
+const Post = mongoose.model("Post", postSchema);
 
 const app = express();
 
@@ -13,9 +27,10 @@ app.use(express.static("public"));
 
 app.get("/", function(req, res){
 
-    res.render("home");
-  
+    res.render("home");  
 });
+
+/* -----General Routes----- */
 
 app.get("/nossa-historia", function(req, res){
 
@@ -29,7 +44,12 @@ app.get("/contato", function(req, res){
 
 app.get("/blog", function(req, res){
 
-    res.render("blog");
+    Post.find({}, function(err, posts){
+        res.render("blog", {
+     
+          posts: posts     
+        }); 
+    });
 });
 
 app.get("/personalizado", function(req, res){
@@ -40,6 +60,30 @@ app.get("/personalizado", function(req, res){
 app.get("/praia", function(req, res){
 
     res.render("praia");
+});
+
+/* -----Blog Routes----- */
+// Compose histories
+
+app.get("/compose", function(req, res){
+    
+    res.render("compose");
+});
+  
+app.post("/compose", function(req, res){
+  
+    const post = new Post({
+      title: req.body.postTitle,
+      subtitle: req.body.postSubtitle,
+      content: req.body.postBody
+    });
+    
+    post.save(function(err){
+      if(!err){
+        res.redirect("/");
+      }
+    });  
+  
 });
 
 

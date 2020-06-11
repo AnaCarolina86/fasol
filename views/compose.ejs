@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+
+    <section class="compose">
+        <h1>Let's create a Post</h1>
+
+        <form class="form-blog" action="/compose" method="post">
+            <div class="form-group">
+                <label class="title-blog-label">Título:</label>
+                <input class="title-blog-input" type="text" name="postTitle">
+                <br>
+                <label class="subtitle-blog-label">Subtítulo:</label>
+                <input class="subtitle-blog-input" type="text" name="postSubtitle">
+                <br>
+                <label class="textarea-blog-label">Post:</label>
+                <textarea class="textarea-blog" name="postBody" rows="5" cols="30"></textarea>
+            </div>
+            <button class="btn btn-primary compose-btn" type="submit" name="button">Publish</button>
+        </form>     
+        
+    </section>
+
+<%- include("partials/footer"); -%>    

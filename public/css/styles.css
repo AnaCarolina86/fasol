@@ -387,7 +387,8 @@ h3{ font-size: var(--fs-h3); }
 
 .images-measures input{
     border-radius: 1rem;
-    width: 6rem;    
+    width: 5.5rem; 
+    height: 27px;   
 }
 
 .man-measures{
@@ -532,7 +533,7 @@ h3{ font-size: var(--fs-h3); }
     width: fit-content;
     font-size: 1rem;    
     top: -0.7rem;
-}
+} 
 
 .submit-form{
     color: var(--clr-light);
@@ -556,23 +557,56 @@ h3{ font-size: var(--fs-h3); }
     position: relative;   
     left: 10rem;
     top: 16rem; 
+    width: 40rem;
 }
 
-.title-blog, .subtitle-blog{
-    font-size: 1.8rem;    
-    width: 37rem;
+.title-blog, .subtitle-blog, .content-blog{ 
+    margin: 1rem;
 }
 
-.title-blog{ color: var(--clr-blue); }
+.title-blog{ 
+    color: var(--clr-blue); 
+    font-size: 2.2rem;
+}
 
-.subtitle-blog{ color: var(--clr-light-blue); }
+.subtitle-blog{ 
+    color: var(--clr-light-blue); 
+    font-size: 2rem;
+}
+
+.content-blog{
+    font-size: 1.8rem;
+}
 
 .image-blog{
     position: relative;
     float: right;
-    top: 6rem;
+    top: 0;
     right: 13rem;
     width: 20%;
+}
+
+/* Compose Styles */
+.compose{ padding: 2rem; }
+
+.compose h1{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-blog{ font-size: var(--fs-h3); }
+
+.textarea-blog-label{
+    position: relative;
+    float: left;
+}
+
+.compose-btn{
+    font-size: var(--fs-h2);
+    width: 20rem;
+    height: 5rem;
+    padding: .3rem;
+    border: dotted .5rem var(--clr-yellow);
 }
 
 /* Contact Styles */
@@ -636,21 +670,25 @@ textarea{
 /* Footer Styles */
 
 footer{   
+    position: relative;
     background-color: var(--clr-light);
     margin: 0.5rem;
     padding: 1.5rem;   
 }
 
 .icons-media{
-    text-align: center;   
     position: relative;
-    float: bottom;    
+    text-align: center; 
+    width: fit-content;
+    margin: 0 auto 0 auto;
 }
 
 .social-icon{
+    position: relative;
     font-size: 2em;    
     color: var(--clr-gray);
     margin: 0.5rem;
+    text-align: center;
 }
 
 .social-icon:hover{
