@@ -12,6 +12,9 @@
   },
   "author": "Ana Carolina Mendes",
   "license": "ISC",
+  "engines": {
+    "node": "10.15.3"
+  },
   "bugs": {
     "url": "https://github.com/AnaCarolina86/fasol/issues"
   },
