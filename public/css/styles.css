@@ -610,9 +610,7 @@ h3{ font-size: var(--fs-h3); }
 }
 
 /* Contact Styles */
-.contact{
-    padding-bottom: 25rem;
-}
+.contact{ padding-bottom: 25rem;}
 
 .form-contact{ 
     width: 55%;
@@ -659,10 +657,22 @@ textarea{
     margin: 2em;
     position: relative;
     float: right;
+    top: -1.5rem;
 }
 
 .adress{
     width: 100%;
+}
+
+.instagram-contact{
+    margin-bottom: 0.3rem;
+}
+
+td a{ color: var(--clr-blue); }
+
+td a:hover{
+    text-decoration: none;
+    color: var(--clr-light-yellow);
 }
 
 
@@ -679,7 +689,7 @@ footer{
 .icons-media{
     position: relative;
     text-align: center; 
-    width: fit-content;
+    width: 10rem;
     margin: 0 auto 0 auto;
 }
 

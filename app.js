@@ -7,7 +7,7 @@ const _ = require("lodash");
 
 /* -----DataBase----- */
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost:27017/fasolDB', {useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://atlas-anacarolina:mongotodov2@cluster0-tddmo.mongodb.net/fasolDB', {useNewUrlParser: true, useUnifiedTopology: true });
 
 // Schema
 const postSchema = {
