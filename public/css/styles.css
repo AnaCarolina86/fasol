@@ -26,23 +26,10 @@
     --clr-yellow: rgb(243, 225, 135);
     --clr-light-yellow: rgb(241, 225, 159);
         
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
-
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
           0.125em 0.125em 0.25em rgba(0,0,0,0.15);
 }
 
-@media (min-width: 800px){
-    :root{
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.2rem;
-    }
-}
 /* General Styles */
 
 html{
@@ -54,41 +41,38 @@ body{
     padding: 0;   
     font-family: var(--ff-primary);
     color: var(--clr-blue);
+    width: fit-content;
 }
 
 /* Typography */
-h1,
-h2,
-h3 {
+h1, h2, h3{
     line-height: 1;
     margin: 0;
 }
-
-h1{ font-size: var(--fs-h1); }
-h2{ font-size: var(--fs-h2); }
-h3{ font-size: var(--fs-h3); }
 
 /* Buttons */
 .buttons-header{
     margin-bottom: 0;
 }
+
 .btn{
-    color: var(--clr-blue);
     background-color: var(--clr-light);
     cursor: pointer;    
     line-height: 0.9rem;
-}
-
-.btn:hover{
-    color: var(--clr-light-blue);
-    background-color: var(--clr-light);
-    text-decoration: none;
+    font-weight: 400;
 }
 
 .btn a{
     text-decoration: none;
+    color: var(--clr-blue);
     font-family: var(--ff-test);
     font-weight: 400;
+}
+
+.btn a:hover, .btn:hover{
+    text-decoration: none;
+    color: var(--clr-light-blue);
+    background-color: var(--clr-light);
 }
 
 .input-button{
@@ -97,7 +81,7 @@ h3{ font-size: var(--fs-h3); }
     font-weight: 400;
     background-image: url('/images/search-solid.svg'); 
     background-repeat: no-repeat; 
-    background-position: left;  
+    background-position: 3px 4px;  
     background-size: 8%;  
     margin-bottom: 0;    
     padding-bottom: 5px;
@@ -134,16 +118,27 @@ h3{ font-size: var(--fs-h3); }
     background-color: var(--clr-yellow);
     margin: 0;
     padding: 0;
+    width: 100%;
 }
+
 .header_logo{
     width: 50%;
     position: relative;
-    margin: 0.1em auto 0.3em auto;
+    margin: 0.1em auto 0 auto;
 }
 
 .logo{
-    width: 15%;
-    margin: 0;
+    width: 25%;
+    min-width: 200px;
+    margin: 1.5em auto 1em auto;
+}
+
+@media(min-width: 600px){
+    .logo{
+        width: 35%;
+        min-width: 200px;
+        margin: 2em auto 1.5em auto;
+    }    
 }
 
 .nav{
@@ -210,7 +205,7 @@ h3{ font-size: var(--fs-h3); }
 .hamburger,
 .hamburger::before,
 .hamburger::after{
-    background: var(--clr-gray);
+    background: var(--clr-light-blue);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -228,21 +223,13 @@ h3{ font-size: var(--fs-h3); }
 .hamburger::before{ top: 6px;}
 .hamburger::after{ bottom: 6px;}
 
-@media(min-width: 600px){
-    .logo{
-        width: 35%;
-        min-width: 250px;
-        margin: 2em auto 1.5em auto;
-    }    
-}
-
 @media(min-width: 1000px){
     .nav-open .nav{
         transform: translateX(80%);    
     }
 }
 
-@media(max-width: 930px){
+@media(max-width: 900px){
     .buttons-header{
         display: none;
     }
@@ -250,40 +237,28 @@ h3{ font-size: var(--fs-h3); }
 
 /* Home Page Styles */
 .home-section{
-    margin: 0;
-    margin-bottom: 3.5rem;
+    margin: 0;    
     padding: 0;
-    height: 29rem;
-}
-
-.image-home{ 
-    position: relative;
-    z-index: 1;
-    max-width: 84.3em; 
-    opacity: 0.6;
-}
-
-.title-home, .subtitle-home{
-    z-index: 1000;
-    position: relative;
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;    
+    height: 30rem;
+    border-left: solid 4rem var(--clr-yellow);
+    border-right: solid 4rem var(--clr-yellow);
+    background-color: var(--clr-yellow);
+    background-image: url("/images/evolucao-biquini.png");
+    background-size: 112%; 
+    background-repeat: no-repeat;   
 }
 
 .title-home{
-    bottom: 20rem;    
+    z-index: 1000;
+    position: relative;
+    top: 19rem;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;      
     -webkit-text-stroke: 2.5px var(--clr-blue);
     color: var(--clr-light);
-    font-size: 6em;  
+    font-size: 4em;  
     box-shadow: var(--bs);  
-}
-
-.subtitle-home{
-    bottom: 18rem;
-    color: var(--clr-light-yellow);
-    -webkit-text-stroke: 2px var(--clr-gray);
-    color: var(--clr-light);
 }
 
 .circles{
@@ -292,7 +267,7 @@ h3{ font-size: var(--fs-h3); }
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    top: -11.6rem;    
+    top: 22rem;    
 }
 
 .circle1, .circle2{
@@ -314,6 +289,53 @@ h3{ font-size: var(--fs-h3); }
     float: right;
     margin-top: 0.6rem;
 } 
+
+@media(min-width: 1000px){
+    .title-home{ top: 12rem; }
+    .circles{ top: 15rem; }
+}
+
+@media(max-width: 1000px){
+    .title-home{
+        top: 10rem;
+    }
+    .circles{
+        top: 12rem;
+    }
+}
+
+@media(max-width: 480px){
+    .home-section{
+        height: 10rem;
+        background-size: 125%;
+        border-left: solid 2rem var(--clr-yellow);
+        border-right: solid 2rem var(--clr-yellow);
+    }
+    .title-home{
+        font-size: 1.2em;
+        text-align: center;
+        -webkit-text-stroke: 1px var(--clr-blue);
+        width: 10rem;
+        top: 3rem;
+    }
+    
+    .circles{ 
+        top: 3.4rem;
+        width: 1.5rem;
+    }
+    .circle1, .circle2{
+        border: solid 0.05rem var(--clr-light);
+    }
+    .circle1{
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    .circle2{
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-top: 0.4rem;
+    }
+}
 
 /* History Styles */
 .history-section{
@@ -680,10 +702,18 @@ td a:hover{
 /* Footer Styles */
 
 footer{   
-    position: relative;
-    background-color: var(--clr-light);
+    position: relative; 
+    background-color: var(--clr-light);  
     margin: 0.5rem;
-    padding: 1.5rem;   
+    padding: 1.5rem;       
+}
+
+@media(max-width: 600px){
+    footer{
+        margin: 0.2rem;
+        padding: 0.5rem; 
+    }
+    .icons-media{ width: 6rem; }
 }
 
 .icons-media{
@@ -701,8 +731,6 @@ footer{
     text-align: center;
 }
 
-.social-icon:hover{
-    color: var(--clr-yellow);
-}
+.social-icon:hover{ color: var(--clr-yellow); }
 
 .link-social-media:hover{ text-decoration: none; }
