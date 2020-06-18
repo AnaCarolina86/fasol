@@ -37,16 +37,11 @@ app.get("/nossa-historia", function(req, res){
     res.render("nossa-historia");
 });
 
-app.get("/contato", function(req, res){
-
-    res.render("contato");
-});
-
 app.get("/blog", function(req, res){
 
     Post.find({}, function(err, posts){
-        res.render("blog", {
-     
+
+        res.render("blog", {     
           posts: posts     
         }); 
     });
@@ -63,7 +58,7 @@ app.get("/praia", function(req, res){
 });
 
 /* -----Blog Routes----- */
-// Compose histories
+// Compose : create new posts
 
 app.get("/compose", function(req, res){
     
@@ -82,8 +77,20 @@ app.post("/compose", function(req, res){
       if(!err){
         res.redirect("/");
       }
-    });  
-  
+      else{
+          console.log(err);
+      }
+    });    
+});
+
+/* -----Contact Routes----- */
+app.get("/contato", function(req, res){
+
+    res.render("contato");
+});
+
+app.post("/contato", function(req, res){
+    
 });
 
 
