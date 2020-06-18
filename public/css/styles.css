@@ -62,17 +62,16 @@ h1, h2, h3{
     font-weight: 400;
 }
 
-.btn a{
+.btn-label{
     text-decoration: none;
     color: var(--clr-blue);
     font-family: var(--ff-test);
     font-weight: 400;
 }
 
-.btn a:hover, .btn:hover{
+.btn-link:hover{
     text-decoration: none;
     color: var(--clr-light-blue);
-    background-color: var(--clr-light);
 }
 
 .input-button{
@@ -90,13 +89,6 @@ h1, h2, h3{
     bottom: 0;
     height: 1.65rem;
     text-indent: 0.75rem;
-}
-.input-button:active{
-    background-image: url('/images/search-solid.svg'); 
-    background-repeat: no-repeat; 
-    background-position: 2px 4px;  
-    background-size: 8.5%; 
-    border: none; 
 }
 
 .input-button, .btn{
@@ -117,6 +109,14 @@ input[type="search"] {
     font-family: inherit;
     font-size: 1em;
     padding-right: 0;
+}
+
+.input-button:active{
+    background-image: url('/images/search-solid.svg'); 
+    background-repeat: no-repeat; 
+    background-position: 2px 4px;  
+    background-size: 8.5%; 
+    border: none; 
 }
 
 /* Styles for the Header Section */
