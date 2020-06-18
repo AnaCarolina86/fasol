@@ -74,6 +74,12 @@ h1, h2, h3{
     color: var(--clr-light-blue);
 }
 
+.access{
+    margin-top: 2em;
+    background-color: var(--clr-yellow);
+    color: var(--clr-blue);
+}
+
 .input-button{
     color: var(--clr-gray);
     font-family: var(--ff-test);
@@ -649,19 +655,18 @@ hr{ max-width: 15em; }
     width: 20rem;
     height: 5rem;
     padding: .3rem;
-    border: dotted .5rem var(--clr-yellow);
+    border: dotted .5rem orange;
 }
 
 /* Contact Styles */
-.contact{ padding-bottom: 25rem;}
+.contact{ padding-bottom: 5em;}
 
 .form-contact{ 
-    width: 55%;
     position: relative;
-    float: left;
+    left: 3em;
 }
 
-.title-contact{ margin: 2rem; }
+.title-contact{ margin: 3em; }
 
 .form-contact input{
     background-color: var(--clr-light-yellow);
@@ -671,7 +676,7 @@ hr{ max-width: 15em; }
     margin: 1rem;
 }
 
-.form-contact ::placeholder{
+.form-contact::placeholder{
     color: var(--clr-blue);
     font-size: var(--fs-h3);
     text-align: left;
@@ -695,14 +700,6 @@ textarea{
     margin: 1rem;   
 }
 
-.media{
-    width: 40%;
-    margin: 2em;
-    position: relative;
-    float: right;
-    top: -1.5rem;
-}
-
 .adress{
     width: 100%;
 }
@@ -711,13 +708,15 @@ textarea{
     margin-bottom: 0.3rem;
 }
 
-td a{ color: var(--clr-blue); }
-
-td a:hover{
-    text-decoration: none;
-    color: var(--clr-light-yellow);
+.submit-form-contact{
+    position: relative;
+    margin: 2em auto 1em auto;
 }
+/* Login/Register Styles */
 
+.title-login, .title-register{
+    margin-bottom: 1em;
+}
 
 
 /* Footer Styles */
@@ -725,7 +724,6 @@ td a:hover{
 footer{   
     position: relative; 
     background-color: var(--clr-light);  
-    margin: 0.5rem;
     padding: 1.5rem;       
 }
 

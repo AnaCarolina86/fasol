@@ -3,50 +3,38 @@
     <section class="contact">
         <h2 class="title-contact">Fale Conosco</h2>
 
-        <form action="/" method="POST" class="form-contact">
-            <input type="text" name="name-contact" placeholder="Nome" class="name-contact">
-            <input type="email" name="email-contact" placeholder="E-mail" class="email-contact"><br>
-            <input type="number" name="number-contact" placeholder="Telefone" class="number-contact">
-            <input type="text" name="subject-contact" placeholder="Assunto" class="subject-contact"><br>
-            <textarea name="message-contact" class="message-contact" rows="7" cols="33">  Mensagem
-            </textarea>
-            <button type="submit" class="submit-form">Enviar</button>
-        </form>
-
-        <div class="media">
-            <table>
-                <tbody>
-                    <tr>
-                        <td><h3 class="adress">Endereço</h3></td>
-                    </tr>
-                    <tr>
-                        <td><p>Rua Egito, 97 - Copacabana - Belo Horizonte/MG</p></td>
-                    </tr>
-                    <tr>
-                        <td><h3 class="email-fasol">E-mail</h3></td>
-                    </tr>
-                    <tr>
-                        <td><p><i class="fas fa-at"></i> fasoalheiro@gmail.com</p></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Whatsapp</h3></td>
-                    </tr>
-                    <tr>
-                        <td><p><i class="fab fa-whatsapp"></i> (31) 97348-8605</p></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Redes Sociais</h3></td>
-                    </tr>
-                    <tr>
-                        <td><p class="instagram-contact"><i class="fab fa-instagram"></i><a class="" href="https://www.instagram.com/fasol_modapraia/"> Instagram</p></a></td>
-                    </tr>
-                    <tr>
-                        <td><p><i class="fab fa-facebook"></i><a class="" href="https://www.facebook.com/FaSoalheiro/"> Facebook</p></a></td>
-                    </tr>
-                </tbody>
-            </table>                            
-              
-        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <form action="/" method="POST" class="form-contact">
+                    <input type="text" name="name-contact" placeholder="Nome" class="name-contact">
+                    <input type="email" name="email-contact" placeholder="E-mail" class="email-contact"><br>
+                    <input type="text" name="number-contact" placeholder="Telefone" class="number-contact">
+                    <input type="text" name="subject-contact" placeholder="Assunto" class="subject-contact"><br>
+                    <textarea name="message-contact" class="message-contact" rows="7" cols="33"> Mensagem
+                    </textarea>
+                    <button type="submit" class="submit-form-contact">Enviar</button>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <div class="adress">
+                    <h3 class="">Endereço</h3>
+                    <p>Rua Egito, 97 - Copacabana - Belo Horizonte/MG</p>
+                </div>
+                <div class="email-fasol">
+                    <h3 class="">E-mail</h3>
+                    <p><i class="fas fa-at"></i> fasoalheiro@gmail.com</p>
+                </div>
+                <div class="whatsapp">
+                    <h3>Whatsapp</h3>
+                    <p><i class="fab fa-whatsapp"></i> (31) 97348-8605</p>
+                </div>
+                <div class="social-media">
+                    <h3>Redes Sociais</h3>
+                    <p class="instagram-contact"><i class="fab fa-instagram"></i><a class="" href="https://www.instagram.com/fasol_modapraia/"> Instagram</a></p>
+                    <p><i class="fab fa-facebook"></i><a class="" href="https://www.facebook.com/FaSoalheiro/"> Facebook</a></p>
+                </div>
+            </div>
+        </div>        
 
     </section>
 

@@ -1,22 +1,35 @@
 //jshint esversion:6
-
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
+const encrypt = require('mongoose-encryption');
 
 /* -----DataBase----- */
 const mongoose = require("mongoose");
 mongoose.connect('mongodb+srv://atlas-anacarolina:mongotodov2@cluster0-tddmo.mongodb.net/fasolDB', {useNewUrlParser: true, useUnifiedTopology: true });
 
-// Schema
+// Schema Posts
 const postSchema = {
     title: String,
     subtitle: String,
     content: String
 };
-// Model
+// Model Post
 const Post = mongoose.model("Post", postSchema);
+
+// Schema Login
+const userSchema = new mongoose.Schema({
+    username: String,
+    email: String,
+    password: String
+});
+
+userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"]}); 
+//its important to add this plugin before creating the model
+// Model Admin
+const User = new mongoose.model("User", userSchema);
 
 const app = express();
 
@@ -33,7 +46,6 @@ app.get("/", function(req, res){
 /* -----General Routes----- */
 
 app.get("/nossa-historia", function(req, res){
-
     res.render("nossa-historia");
 });
 
@@ -48,20 +60,21 @@ app.get("/blog", function(req, res){
 });
 
 app.get("/personalizado", function(req, res){
-
     res.render("personalizado");
 });
 
 app.get("/praia", function(req, res){
-
     res.render("praia");
 });
+
+app.get("/access", function(req,res){
+    res.render("access");
+})
 
 /* -----Blog Routes----- */
 // Compose : create new posts
 
-app.get("/compose", function(req, res){
-    
+app.get("/compose", function(req, res){    
     res.render("compose");
 });
   
@@ -81,6 +94,55 @@ app.post("/compose", function(req, res){
           console.log(err);
       }
     });    
+});
+
+/* -----Register Routes----- */
+app.get("/register", function(req, res){
+    res.render('register');
+});
+
+app.post("/register", function(req, res){
+    const newUser = new User({
+        username: req.body.userName,
+        email: req.body.usermail,
+        password: req.body.password
+    });
+
+    newUser.save(function(err){
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.render("home");
+        }
+    });
+    
+});
+
+/* -----Login Routes----- */
+app.get("/login", function(req, res){
+    res.render("login");
+});
+
+app.post("/login", function(req, res){
+    const username = req.body.userName;
+    const password = req.body.password;
+
+    User.findOne({username: username}, function(err, foundUser){
+        if(err){
+            console.log(err);
+        }
+        else{
+            if(foundUser.password === password){
+                if(foundUser.username === "admin"){
+                    res.render("compose");
+                }
+                else{
+                    res.render("home");
+                }               
+            }
+        }
+    });
 });
 
 /* -----Contact Routes----- */
