@@ -10,11 +10,11 @@ interface with the aim of allowing them to manage the content of the website, us
 ## Technical Aspects
 
 My stack in this project:
- *JavaScript/HTML/CSS
- *Bootstrap, Grid, EJS template
- *Node.js, Express.js, RESTful 
- *MongoDB, Mongoose
- *Git/GitHub
+ * JavaScript/HTML/CSS
+ * Bootstrap, Grid, EJS template
+ * Node.js, Express.js, RESTful 
+ * MongoDB, Mongoose
+ * Git/GitHub
  
  
  It needs improvements in security and layout. The project it's not finished yet.
