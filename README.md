@@ -17,5 +17,5 @@ My stack in this project:
  * Git/GitHub
  
  
- It needs improvements in security and layout. The project it's not finished yet.
+ It needs improvements in security and layout. The project is not finished yet.
  
