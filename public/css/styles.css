@@ -44,6 +44,8 @@ body{
     width: fit-content;
 }
 
+section{ padding-bottom: 2em; }
+
 /* Typography */
 h1, h2, h3{
     line-height: 1;
@@ -51,9 +53,7 @@ h1, h2, h3{
 }
 
 /* Buttons */
-.buttons-header{
-    margin-bottom: 0;
-}
+.buttons-header{ margin-bottom: 0; }
 
 .btn{
     background-color: var(--clr-light);
@@ -186,7 +186,7 @@ input[type="search"] {
     text-decoration: none;
 }
 
-.nav_link:hover{ color: var(--clr--accent); }
+.nav_link:hover{ color: var(--clr-blue); }
 
 .nav-toggle{
     padding: .5em;
@@ -199,7 +199,7 @@ input[type="search"] {
     z-index: 1000;
 }
 
-.nav-open .nav{ transform: translateX(75em); }
+.nav-open .nav{ transform: translateX(0); }
 
 .nav-open .nav-toggle{ position: fixed; }
 
@@ -219,7 +219,7 @@ input[type="search"] {
 .hamburger,
 .hamburger::before,
 .hamburger::after{
-    background: var(--clr-light-blue);
+    background: var(--clr-blue);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -237,9 +237,9 @@ input[type="search"] {
 .hamburger::before{ top: 6px;}
 .hamburger::after{ bottom: 6px;}
 
-@media(min-width: 1000px){
+@media(max-width: 1000px){
     .nav-open .nav{
-        transform: translateX(80%);    
+        transform: translateX(0);    
     }
 }
 
@@ -416,122 +416,12 @@ input[type="search"] {
     font-size: 2.75rem;
 }
 
-.images-measures{
-    margin: 3rem 0.2rem;
-    font-size: var(--fs-body);
+.man-image, .woman-image{
+    width: 70%;
 }
 
-.images-measures input{
-    border-radius: 1rem;
-    width: 5.5rem; 
-    height: 27px;   
-}
-
-.man-measures{
-    position: relative;
-    width: 20%;
-    float: left;
-    margin-left: 0.1rem;   
-}
-
-.woman-measures{
-    position: relative;
-    width: 30%;    
-    margin-right: -2rem;   
-}
-
-.form{
-    color: var(--clr-blue);
-    font-size: 2rem;
-    margin-left: 2.5rem;
-    margin-right: 1.5rem;
-}
-
-.height-man-input, .man-height-label, .man-hip-input, .man-hip-label{
-    z-index: 1000;
-    position: relative;
-    float: left;
-}
-
-.height-man-input{
-    top: 15rem;
-    left: 0;
-    margin: 0;
-}
-
-.man-height-label{
-    left: 4.5rem;
-    top: 13.5rem;
-}
-
-.man-hip-input{
-    top: 13.5rem;
-    margin: 0;   
-    right: 4rem; 
-}
-
-.man-hip-label{
-    top: 12rem;
-    left: 1rem;
-    margin-bottom: 0;
-}
-
-.man-hip-label, .woman-height-label, .woman-bra-label, .woman-waist-input, 
-.woman-waist-label, .woman-hip-label{
-    margin-bottom: 0;
-}
-
-.woman-height-input, .woman-height-label, .woman-bra-input, .woman-bra-label,
-.woman-waist-input, .woman-waist-label, .woman-hip-input, .woman-hip-label{
-    z-index: 1000;
-    position: relative;
-}
-
-.woman-height-input{    
-    top: 2rem;
-    left: 0;
-}
-
-.woman-height-label{
-    left: 5.5rem;
-    top: 0;
-}
-
-.woman-bra-input{
-    top: -22rem;
-    left: 60rem;
-    margin: 0;
-}
-
-.woman-bra-label{
-    top: -8rem;
-    left: -9rem;
-}
-
-.woman-waist-input, .woman-waist-label, .woman-hip-input, .woman-hip-label{
-    float: right;
-}
-
-.woman-waist-input{
-    margin-left: 0;
-    top: -19.5rem;
-    right: 4rem;
-}
-
-.woman-waist-label{
-    top: -21rem;
-    right: 9rem;
-}
-
-.woman-hip-input{
-    top: -16rem;
-    left: 13rem;
-}
-
-.woman-hip-label{
-    top: -17.5rem;
-    left: 7rem;
-}
+.man-image-measures{ width: 60%; }
+.woman-image-measures{ width: 90%; }
 
 .input-form{
     background-color: var(--clr-light-yellow);
@@ -541,7 +431,7 @@ input[type="search"] {
     margin-right: 0.75rem;
     margin-bottom: 2rem;
     color: var(--clr-blue);   
-    height: 2.5rem; 
+    height: 2rem; 
 }
 
 .input-form::placeholder{
@@ -763,7 +653,7 @@ hr{ max-width: 15em; }
 
 footer{   
     position: relative; 
-    background-color: var(--clr-light-blue);  
+    background-color: var(--clr-light);  
     padding: 1.5rem;
     margin: 0;       
 }

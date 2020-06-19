@@ -11,33 +11,58 @@
 
         <form action="/" method="POST" class="form">
              <!--Inputs for the images-->
-            <div class="images-measures">
-                <div class="man-height">
-                    <label class="man-height-label" for="man-height">Altura</label>
-                    <input class="input-form height-man-input" name="man-height" type="number">
+            <div class="row images">
+                <div class="col-sm-6 man-image">
+                    <img src="/images/homem-medidas.png" alt="man measures swimming wear, medidas masculinas roupa de banho" class="man-image-measures">
                 </div>
-                
-                <img src="/images/homem-medidas.png" alt="man measures" class="man-measures">
-                <div class="man-hip">
-                    <label class="man-hip-label" for="man-hip">Quadril</label>
-                    <input class="input-form man-hip-input" name="man-hip" type="number">
+                <div class="col-sm-6 woman-image">
+                    <img src="/images/mulher-medidas.png" alt="woman measures swimming wear bikini, medidas femininas bikini maiô" class="woman-image-measures">
                 </div>                
+            </div>  
+            <div class="row inputs-images-people">
+                <div class="col radiobox-people">
+                    <div>
+                        <input type="radio" class="radiobox" id="man" name="gender" value="man">
+                        <label for="man">Homem</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="radiobox" id="woman" name="gender" value="woman">
+                        <label for="woman">Mulher</label>
+                    </div>                  
 
-                
-                    <label class="woman-height-label" for="woman-height">Altura</label>
-                    <input class="input-form woman-height-input" name="woman-height" type="number">
-                               
-                <img src="/images/mulher-medidas.png" alt="woman measures" class="woman-measures">
-
-                <label class="woman-bra-label" for="woman-bra">Busto</label>
-                <input class="input-form woman-bra-input" name="woman-bra" type="number">
-
-                <label class="woman-waist-label" for="woman-waist">Cintura</label>
-                <input class="input-form woman-waist-input" name="woman-waist" type="number">
-
-                <label class="woman-hip-label" for="woman-hip">Quadril</label>
-                <input class="input-form woman-hip-input" name="woman-hip" type="number">
-            </div>                   
+                </div>
+                <div class="col inputs-measures">
+                    <div class="man-measures">
+                        <div class="height">
+                            <label class="height-label" for="height-man">Altura</label>
+                            <input class="input-form input-height" name="height-man" type="text" placeholder="cm">
+                        </div>
+                        <div class="hip">
+                            <label class="hip-label" for="hip-man">Quadril</label>
+                            <input class="input-form hip-input" name="hip-man" type="text" placeholder="cm">
+                        </div>
+                    </div>
+                    <div class="woman-measures">
+                        <div class="height">
+                            <label class="height-label" for="height-woman">Altura</label>
+                            <input class="input-form input-height" name="height-woman" type="text" placeholder="cm">
+                        </div>
+                        <div class="bra">
+                            <label class="bra-label" for="bra-woman">Busto</label>
+                            <input class="input-form bra-input" name="bra-woman" type="text" placeholder="cm">
+                        </div>
+                        <div class="hip">
+                            <label class="waist-label" for="waist-woman">Cintura</label>
+                            <input class="input-form waist-input" name="waist-woman" type="text" placeholder="cm">
+                        </div>
+                        <div class="hip">
+                            <label class="hip-label" for="hip-woman">Quadril</label>
+                            <input class="input-form hip-input" name="hip-woman" type="text" placeholder="cm">
+                        </div>                       
+                        
+                    </div>                    
+                </div>
+            </div>                 
                     
             <!--Inputs for the rest of the form-->
             <div class="fields-form">
