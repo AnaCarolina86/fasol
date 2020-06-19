@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
-const token = "";
+let token = "";
 require('crypto').randomBytes(64, function(err, buffer) {
     token = buffer.toString('base64');
 });
