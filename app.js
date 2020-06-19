@@ -26,8 +26,14 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
-userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"]}); 
+const token = "";
+require('crypto').randomBytes(64, function(err, buffer) {
+    token = buffer.toString('base64');
+});
+
+userSchema.plugin(encrypt, { secret: token, encryptedFields: ["password"]}); 
 //its important to add this plugin before creating the model
+//secret: process.env.SECRET
 // Model Admin
 const User = new mongoose.model("User", userSchema);
 
