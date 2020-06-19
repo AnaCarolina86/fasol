@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
+// @ts-ignore
 const encrypt = require('mongoose-encryption');
 
 /* -----DataBase----- */
@@ -26,12 +27,8 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
-let token = "";
-require('crypto').randomBytes(64, function(err, buffer) {
-    token = buffer.toString('base64');
-});
 
-userSchema.plugin(encrypt, { secret: token, encryptedFields: ["password"]}); 
+userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"]}); 
 //its important to add this plugin before creating the model
 //secret: process.env.SECRET
 // Model Admin
