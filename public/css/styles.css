@@ -423,6 +423,20 @@ input[type="search"] {
 .man-image-measures{ width: 60%; }
 .woman-image-measures{ width: 90%; }
 
+.inputs-images-people{ margin-top: 2em; }
+
+.radioboxes{
+    position: relative;
+    width: fit-content;
+    left: 50%;
+}
+
+.input-closed{ visibility: hidden; }
+
+.input-open{ visibility: visible; }
+
+.small-input{ width: 6em; }
+
 .input-form{
     background-color: var(--clr-light-yellow);
     border: none;
@@ -430,7 +444,8 @@ input[type="search"] {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     margin-bottom: 2rem;
-    color: var(--clr-blue);   
+    color: var(--clr-blue);  
+    text-indent: 1em; 
     height: 2rem; 
 }
 
@@ -438,7 +453,8 @@ input[type="search"] {
     color: var(--clr-blue);
     font-size: var(--fs-body);
     opacity: 0.6;
-    text-align: center;
+    text-align: right;
+    
 }
 
 .fields-form, .name-label, .name-input, .email-label, .email-input,
