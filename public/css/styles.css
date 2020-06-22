@@ -435,7 +435,7 @@ input[type="search"] {
 
 .input-open{ visibility: visible; }
 
-.small-input{ width: 6em; }
+.small-input{ width: 5em; }
 
 .input-form{
     background-color: var(--clr-light-yellow);
@@ -443,18 +443,17 @@ input[type="search"] {
     border-radius: 1.5rem;      
     margin-left: 0.75rem;
     margin-right: 0.75rem;
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
     color: var(--clr-blue);  
     text-indent: 1em; 
-    height: 2rem; 
+    height: 2.2rem; 
 }
 
 .input-form::placeholder{
     color: var(--clr-blue);
     font-size: var(--fs-body);
     opacity: 0.6;
-    text-align: right;
-    
+    text-align: right; 
 }
 
 .fields-form, .name-label, .name-input, .email-label, .email-input,
@@ -462,34 +461,37 @@ input[type="search"] {
     position: relative;
 }
 
-.name{ width: 100%; }
-.name-label{ float: left; }
-.name-input{ width: fit-content; }
-.client-email{ width: 100%; }
-.email-input{ width: fit-content; }
-.contact-input{ width: fit-content; }
-.pants-input{ width: 12rem; }
-.bra-input{ width: 12rem; }
+.fields-form{ 
+    margin-left: 2em; 
+    width: 70%;
+}
+
+.fields-form label{ font-size: 2rem; }
+
+.name-input{ width: 69%; }
+
+.email-input, .contact-input{ width: 20em; }
 
 .model-image-input{ 
     width: fit-content;
     font-size: 1rem;    
-    top: -0.7rem;
+    top: 0;
 } 
 
 .submit-form{
     color: var(--clr-light);
     text-transform: uppercase;
+    font-size: 1.75em; 
     background-color: var(--clr-blue);
-    width: 20%;
     border: none;
     border-radius: 10px;
     position: relative;
-    left: 32rem;      
+    margin-top: 2.5em;
 }
 
 .submit-form:hover{
     background-color: var(--clr-light-blue);
+    color: var(--clr-light);
 }
 
 /* Blog Styles */
