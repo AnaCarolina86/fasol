@@ -53,6 +53,8 @@ h1, h2, h3{
 }
 
 /* Buttons */
+button:focus{ outline: none; }
+
 .buttons-header{ margin-bottom: 0; }
 
 .btn{
