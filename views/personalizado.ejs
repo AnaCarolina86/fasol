@@ -10,75 +10,8 @@
         <h3 class="title-form">Formulário</h3>        
 
         <form action="/" method="POST" class="form">
-             <!--Inputs for the images-->
-            <div class="row images">
-                <div class="col-sm-6 man-image">
-                    <img src="/images/homem-medidas.png" alt="man measures swimming wear, medidas masculinas roupa de banho" class="man-image-measures">
-                </div>
-                <div class="col-sm-6 woman-image">
-                    <img src="/images/mulher-medidas.png" alt="woman measures swimming wear bikini, medidas femininas bikini maiô" class="woman-image-measures">
-                </div>                
-            </div>  
-            <div class="row inputs-images-people">
-                <div class="col radiobox-people">
-                    <div class="radioboxes">
-                        <div>
-                            <input type="radio" class="radiobox" id="man" name="gender" value="man">
-                            <label for="man">Homem</label>
-                        </div>
-                        <div class="man-measures input-closed" id="man-measures">
-                            <div class="height">
-                                <label class="height-label" for="height-man">Altura</label>
-                                <input class="input-form small-input" name="height-man" type="text" placeholder="cm">
-                            </div>
-                            <div class="hip">
-                                <label class="hip-label" for="hip-man">Quadril</label>
-                                <input class="input-form small-input" name="hip-man" type="text" placeholder="cm">
-                            </div>
-                            <div class="pants">
-                                <label class="pants-label" for="pants">Numeração de Calça:</label>
-                                <input class="input-form small-input"  name="pants" type="text">
-                            </div>
-                        </div>                  
-                    </div>
-                </div>
-                <div class="col inputs-measures">
-                    <div>
-                        <input type="radio" class="radiobox" id="woman" name="gender" value="woman">
-                        <label for="woman">Mulher</label>
-                    </div>                    
-                    <div class="woman-measures input-closed" id="woman-measures">
-                        <div class="height">
-                            <label class="height-label" for="height-woman">Altura</label>
-                            <input class="input-form small-input" name="height-woman" type="text" placeholder="cm">
-                        </div>
-                        <div class="bra">
-                            <label class="bra-label" for="bra-woman">Busto</label>
-                            <input class="input-form small-input" name="bra-woman" type="text" placeholder="cm">
-                        </div>
-                        <div class="bra-size">
-                            <label class="bra-label" for="bra">Numeração do Sutiã:</label>
-                            <input class="input-form small-input"  name="bra" type="text">
-                        </div>                        
-                        <div class="hip">
-                            <label class="waist-label" for="waist-woman">Cintura</label>
-                            <input class="input-form small-input" name="waist-woman" type="text" placeholder="cm">
-                        </div>
-                        <div class="hip">
-                            <label class="hip-label" for="hip-woman">Quadril</label>
-                            <input class="input-form small-input" name="hip-woman" type="text" placeholder="cm">
-                        </div>
-                        <div class="pants">
-                            <label class="pants-label" for="pants">Numeração de Calça:</label>
-                            <input class="input-form small-input"  name="pants" type="text">
-                        </div>                     
-                        
-                    </div>                    
-                </div>
-            </div>                 
-                    
-            <!--Inputs for the rest of the form-->
-            <div class="fields-form">
+             <!--Inputs for the beginning of the form-->
+             <div class="fields-form">
                 <div class="name">
                     <label class="name-label" for="name">Nome Completo:</label>
                     <input class="input-form name-input" name="name" type="text">
@@ -97,9 +30,107 @@
                 <input class="input-form model-image-input" name="model-image" type="file"
                 accept="image/*" enctype="multipart/form-data" placeholder="Fazer Upload de Imagem">
                 <br>
-                <button type="submit" class="btn submit-form">Enviar</button>
-            </div>            
-           
+                <div class="row">
+                    <div class="col">
+                        <div class="available-colors">
+                            <h3>Cores Disponíveis</h3>
+                            <div class="blocks">
+                                <div class="pink"></div>
+                                <div class="black"></div>
+                                <div class="blue"></div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="available-prints">
+                            <h3>Estampas Disponíveis</h3>
+                            <div class="pink"></div>
+                            <div class="black"></div>
+                            <div class="blue"></div>
+                        </div>
+                    </div>
+                </div>                
+                
+            </div> 
+
+            <div class="row woman-row">
+                <div class="col-12 title-measures">
+                    <h2>Suas Medidas (Mulheres)</h2>
+                </div>
+                <div class="col">            
+                    <div class="woman-measures-1" id="woman-measures">
+                        <div class="bra-size">
+                            <label class="bra-label" for="bra">Tamanho do Sutiã:</label>
+                            <input class="input-form small-input"  name="bra" type="text">
+                        </div>  
+                        <div class="bra">
+                            <label class="bra-label" for="bra-woman">Medida do Busto:</label>
+                            <input class="input-form small-input" name="bra-woman" type="text" placeholder="">
+                        </div>
+                        <div class="hip">
+                            <label class="hip-label" for="hip-woman">Medida do Quadril:</label>
+                            <input class="input-form small-input" name="hip-woman" type="text" placeholder="">
+                        </div>
+                        <div class="thigh">
+                            <label class="thigh-label" for="hip-woman">Medida da Coxa:</label>
+                            <input class="input-form small-input" name="thigh-woman" type="text" placeholder="">
+                        </div>
+                        <div class="panties">
+                            <label class="panties-label" for="pantiest-woman">Tamanho da Calcinha:</label>
+                            <input class="input-form small-input" name="panties-woman" type="text" placeholder="">
+                        </div>
+                        <div class="sob-bra">
+                            <label class="sob-bra-label" for="sob-bra-woman">Medida do Sob Busto:</label>
+                            <input class="input-form small-input" name="sob-bra-woman" type="text" placeholder="">
+                        </div>
+                        <div class="waist">
+                            <label class="waist-label" for="waist-woman">Medida da Cintura:</label>
+                            <input class="input-form small-input" name="waist-woman" type="text" placeholder="">
+                        </div>
+                        <div class="height">
+                            <label class="height-label" for="height-woman">Altura:</label>
+                            <input class="input-form small-input" name="height-woman" type="text" placeholder="">
+                        </div>
+                    </div>                    
+                </div>
+                <div class="col ">
+                    <div class="woman-measures-2">
+                        <img src="" alt="ilustração medidas mulher">                         
+                    </div>
+                </div>
+            </div>  
+            
+            <div class="row man-row">
+                <div class="col-12 title-measures">
+                    <h3>Suas Medidas (Homens)</h3>
+                </div>
+                <div class="col ">
+                    <div class="man-measures-1">
+                        <div class="hip">
+                            <label class="hip-label" for="hip-man">Medida do Quadril:</label>
+                            <input class="input-form small-input" name="hip-man" type="text" placeholder="cm">
+                        </div>
+                        <div class="pants">
+                            <label class="pants-label" for="pants">Numeração de Calça:</label>
+                            <input class="input-form small-input"  name="pants" type="text">
+                        </div>
+                        <div class="height">
+                            <label class="height-label" for="height-man">Altura:</label>
+                            <input class="input-form small-input" name="height-man" type="text" placeholder="cm">
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col">
+                    <div class="man-measures-2">
+                        <div class="measures-img">
+                            <img src="" alt="ilustração das medidas masculinas">
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+                    
+                      
+            <button type="submit" class="btn submit-form">Enviar</button>
         </form>
 
     </section>

@@ -437,8 +437,6 @@ input[type="search"] {
 
 .input-open{ visibility: visible; }
 
-.small-input{ width: 5em; }
-
 .input-form{
     background-color: var(--clr-light-yellow);
     border: none;
@@ -458,13 +456,21 @@ input[type="search"] {
     text-align: right; 
 }
 
+.small-input{
+    position: relative;
+    float: right;
+    width: 6em; 
+    height: 1.75rem;
+    margin-top: .5em;
+}
+
 .fields-form, .name-label, .name-input, .email-label, .email-input,
 .contact-label, .contact-input, .pants-label, .model-image-input{
     position: relative;
 }
 
 .fields-form{ 
-    margin-left: 2em; 
+    margin: 2.5em auto 1.5em auto; 
     width: 70%;
 }
 
@@ -479,6 +485,23 @@ input[type="search"] {
     font-size: 1rem;    
     top: 0;
 } 
+
+.title-measures{
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.woman-measures-1, .man-measures-1{ float: right; }
+.woman-measures-2, .man-measures-2{ float: left; }
+
+.woman-row label{
+    font-size: 1.75rem;
+}
+
+.man-row label{
+    font-size: 1.75rem;
+}
 
 .submit-form{
     color: var(--clr-light);
@@ -495,6 +518,11 @@ input[type="search"] {
     background-color: var(--clr-light-blue);
     color: var(--clr-light);
 }
+
+.available-prints, .available-colors{
+    width: 15em;
+}
+
 
 /* Blog Styles */
 .blog{ padding-bottom: 2em;}

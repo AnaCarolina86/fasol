@@ -15,7 +15,7 @@ navLinks.forEach(link => {
 
 /* ---Personalizado Page--- */
 
-const radioMan = document.getElementById('man');
+/* const radioMan = document.getElementById('man');
 const radioWoman = document.getElementById('woman');
 const womanMeasures = document.getElementById('woman-measures');
 const manMeasures = document.getElementById('man-measures');
@@ -28,4 +28,4 @@ radioMan.addEventListener('click', () => {
 radioWoman.addEventListener('click', () => {
     womanMeasures.classList.add('input-open');
     manMeasures.classList.remove('input-open');
-});
+}); */
