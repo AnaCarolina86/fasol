@@ -15,6 +15,9 @@ navLinks.forEach(link => {
 
 /* ---Personalizado Page--- */
 
+
+/* ---Personalizado Page--- */
+
 /* const radioMan = document.getElementById('man');
 const radioWoman = document.getElementById('woman');
 const womanMeasures = document.getElementById('woman-measures');
