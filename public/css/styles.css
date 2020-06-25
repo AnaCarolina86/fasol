@@ -443,7 +443,7 @@ input[type="search"] {
     width: 6.5em; 
     height: 2rem;
     margin-top: .75em;
-    margin-right: 3.5em;
+    margin-right: .5em;
 }
 
 .fields-form{ 
@@ -453,9 +453,25 @@ input[type="search"] {
 
 .fields-form label{ font-size: 2rem; }
 
+.client-contact, .client-email{ 
+    position: relative;
+    width: 50%;
+}
+
+.client-email{ float: left; }
+.client-contact{ float: right; }
+
 .name-input{ width: calc(100% - 18em); }
 
-.email-input, .contact-input{ width: calc(85% - 31.5em); }
+.email-input, .contact-input{ width: calc(81% - 5em); }
+
+.name-input, .email-input, .contact-input{ max-width: 45em; }
+
+.model-name-input{ width: 12em;}
+.model-name-input::placeholder{ /* I need to fix this */
+    text-align: center;
+    color: var(--clr-blue);
+}
 
 .inputfile {
 	width: 0.1px;
@@ -466,14 +482,13 @@ input[type="search"] {
 	z-index: -1;
 }
 .inputfile + label {
-    font-size: 1.25em;
-    font-weight: 700;
+    font-size: 1.25rem;
     color: var(--clr-blue);
     background-color: var(--clr-light-yellow);
     display: inline-block;
     border-radius: 1.5rem;
     width: 14em;
-    height: 2.2rem;
+    height: 2.1rem;
     text-align: center;
 }
 
@@ -483,29 +498,96 @@ input[type="search"] {
     cursor: pointer;
 }
 
+.model-name-input, .upload-file{
+    width: 18em;
+}
+
 .available-options{
     margin-top: 2em;
     margin-bottom: 1em;
     width: 75%;
+    text-align: center;
 }
 
-.available-prints, .available-colors{ width: fit-content; }
+.available-prints, .available-colors{ width: 100%; }
+
+.blocks{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 1em;
+}
+
+.pink{ background-color: pink;}
+.black{ background-color: black;}
+.blue{ background-color: blue;}
+
+@media(max-width: 1080px){
+    .fields-form{ 
+        margin: 2em auto 1em auto; 
+        width: 95%;
+    }
+    .client-email, .client-contact{
+        width: 100%;
+    }
+    .client-contact{ float: left; }
+    .email-input, .contact-input{ 
+        width: calc(80% - 4em); 
+    }
+    
+}
 
 .woman-row, .man-row{ margin-right: 0; }
 
 .title-measures{
-    text-align: center;
-    margin: 2em auto 2em auto;
+    margin: 2em 0 2em 4em;
+    text-align: right;
+    color: var(--clr-light);
+    width: 22em;
+    height: 3em;
+    background-color: #f3b62c;
 }
 
-.woman-measures-1, .man-measures-1{ float: right; }
-.woman-measures-2, .man-measures-2{ float: left; }
+.title-measures-blue{ background-color: #3591bf; }
 
-.woman-measures-1, .man-measures-1{ margin-top: 2.5em; }
+.symbol{ 
+    float: left;
+    margin-right: 2em;
+    width: 2.5em;
+}
+
+.title-symbol{ 
+    width: 100%;
+    position: relative;
+    right: .5em;
+    top: .2em;
+}
+
+.woman-measures-1, .man-measures-1{ 
+    float: right; 
+    margin-top: 2.5em; 
+    margin-left: 1.75em;
+}
+
+.woman-measures-img, .man-measures-img{ float: left; }
 
 .woman-row label{ font-size: 2.125rem; }
-
 .man-row label{ font-size: 2.125rem; }
+
+.woman-measures-img, .man-measures-img{ width: 35em; }
+.avatar{ width: 100%; }
+
+.text-measures{ color: var(--clr-light-blue);}
+
+@media(max-width: 1160px){
+    .woman-measures-1, .man-measures-1{ 
+        position: relative;
+        margin-left: 2em;        
+    }
+    .avatar-woman{
+        text-align: center;
+    }
+}
 
 .submit-form-div{
     width: fit-content;
@@ -516,11 +598,13 @@ input[type="search"] {
 .submit-form{
     color: var(--clr-light);
     text-transform: uppercase;
-    font-size: 1.75em; 
+    font-size: 1.75rem; 
     background-color: var(--clr-blue);
     border: none;
     border-radius: 10px;
     position: relative;
+    width: 3.5em;
+    height: 1.5em;
 }
 
 .submit-form:hover{
@@ -528,8 +612,18 @@ input[type="search"] {
     color: var(--clr-light);
 }
 
+.descritive-tables{
+    text-align: center;
+    margin-top: 2.5em;
+}
 
+.descritive-tables img{ width: 70%; }
 
+.woman-tables, .man-tables{
+    margin: 2em auto 3em auto;
+}
+
+.table{ margin-top: 2.5em; }
 
 /* Blog Styles */
 .blog{ padding-bottom: 2em;}
