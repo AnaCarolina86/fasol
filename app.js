@@ -24,11 +24,48 @@ const userSchema = new mongoose.Schema({
     email: String,
     password: String
 });
-
+// Model Login
 const User = new mongoose.model("User", userSchema);
 
-const app = express();
+// Schema Personalizado Data
+const personDataSchema = new mongoose.Schema({
+    namePerson: String,
+    emailPerson: String,
+    contactPerson: String,
+    urlImagePerson: String,
+    imagePerson: String, //I need to change here
+    braPerson: String,
+    pantiesWomanPerson: String,
+    heightWomanPerson: Number,
+    braWomanPerson: Number,
+    sobBraPerson: Number,
+    waistWomanPerson: Number,
+    hipWomanPerson: Number,
+    hipManPerson: Number,
+    thighManPerson: Number,
+    waistManPerson: Number,
+    heightManPerson: Number
+});
 
+// Model Person 
+const Person = new mongoose.model("Person", personDataSchema);
+
+// Schema Contact
+const contactSchema = new mongoose.Schema({
+    nameContact: String,
+    emailContact: String,
+    phoneNumberContact: String,
+    subjectContact: String,
+    textContact: String
+});
+
+//Model Contact
+const Contact = new mongoose.model("Contact", contactSchema);
+
+
+/* -----App Settings----- */
+
+const app = express();
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -55,44 +92,77 @@ app.get("/blog", function(req, res){
     });
 });
 
-app.get("/personalizado", function(req, res){
-    res.render("personalizado");
-});
-
 app.get("/praia", function(req, res){
     res.render("praia");
 });
 
-app.get("/access", function(req,res){
-    res.render("access");
-})
+/* -----Personalizado Routes----- */
 
-/* -----Blog Routes----- */
-// Compose : create new posts
-
-app.get("/compose", function(req, res){    
-    res.render("compose");
+app.get("/personalizado", function(req, res){
+    res.render("personalizado");
 });
-  
-app.post("/compose", function(req, res){
-  
-    const post = new Post({
-      title: req.body.postTitle,
-      subtitle: req.body.postSubtitle,
-      content: req.body.postBody
+
+app.post("/personalizado", function(req, res){
+    const newPerson = new Person({
+        namePerson: req.body.nameperson,
+        emailPerson: req.body.emailperson,
+        contactPerson: req.body.contactperson,
+        urlImagePerson: req.body.modelurlperson,
+        imagePerson: req.body.fileperson, 
+        braPerson: req.body.bra,
+        pantiesWomanPerson: req.body.pantieswoman,
+        heightWomanPerson: req.body.heightwoman,
+        braWomanPerson: req.body.brawoman,
+        sobBraPerson: req.body.sobBra,
+        waistWomanPerson: req.body.waistwoman,
+        hipWomanPerson: req.body.hipwoman,
+        hipManPerson: req.body.hipman,
+        thighManPerson: req.body.thighman,
+        waistManPerson: req.body.waistman,
+        heightManPerson: req.body.heightman
+    });
+
+    newPerson.save(function(err){
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.render("success");
+        }
+    });
+});
+
+/* -----Contact Routes----- */
+app.get("/contato", function(req, res){
+    res.render("contato");
+});
+
+app.post("/contato", function(req, res){
+    
+    const newContact = new Contact({
+        nameContact: req.body.namecontact,
+        emailContact: req.body.emailcontact,
+        phoneNumberContact: req.body.numbercontact,
+        subjectContact: req.body.subjectcontact,
+        textContact: req.body.messagecontact
+    });
+
+    newContact.save(function(err){
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.render("success");
+        }
     });
     
-    post.save(function(err){
-      if(!err){
-        res.redirect("/");
-      }
-      else{
-          console.log(err);
-      }
-    });    
 });
 
 /* -----Register Routes----- */
+app.get("/access", function(req,res){
+    res.render("access");
+});
+
 app.get("/register", function(req, res){
     res.render('register');
 });
@@ -141,19 +211,26 @@ app.post("/login", function(req, res){
     });
 });
 
-/* -----Contact Routes----- */
-app.get("/contato", function(req, res){
-
-    res.render("contato");
-});
-
-app.post("/contato", function(req, res){
+/* -----Blog Routes----- */
+// Compose : create new posts
+  
+app.post("/compose", function(req, res){
+  
+    const post = new Post({
+      title: req.body.postTitle,
+      subtitle: req.body.postSubtitle,
+      content: req.body.postBody
+    });
     
-    //add a successful page
-    res.render("home");
+    post.save(function(err){
+      if(!err){
+        res.redirect("/");
+      }
+      else{
+          console.log(err);
+      }
+    });    
 });
-
-
 
 
 app.listen(process.env.PORT || 3000, function() {

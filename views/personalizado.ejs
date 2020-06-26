@@ -13,25 +13,23 @@
              <!--Inputs for the beginning of the form-->
              <div class="fields-form">
                 <div class="field-form name">
-                    <label class="name-label" for="name">Nome Completo:</label>
-                    <input class="input-form name-input" name="name" type="text">
+                    <label class="name-label" for="nameperson">Nome Completo:</label>
+                    <input class="input-form name-input" name="nameperson" type="text">
                 </div>                 
                 <div class="field-form client-email">
-                    <label class="email-label" for="email">E-mail:</label>
-                    <input class="input-form email-input"  name="email" type="email">
+                    <label class="email-label" for="emailperson">E-mail:</label>
+                    <input class="input-form email-input"  name="emailperson" type="email">
                 </div>
                 <div class="field-form client-contact">
-                    <label class="contact-label" for="contact">Contato:</label>
-                    <input class="input-form contact-input"  name="contact" type="text">
+                    <label class="contact-label" for="contactperson">Contato:</label>
+                    <input class="input-form contact-input"  name="contactperson" type="text">
                 </div>                
                 <div class="field-form client-model">
-                    <label class="model-name-label" for="model-url">Modelo para inspiração:</label>
-                    <input class="input-form model-name-input" name="model-url" type="url" placeholder="Colar URL da Imagem">
-                    <input type="file" name="file" id="file" class="inputfile"                      accept="image/*" enctype="multipart/form-data" data-multiple-caption="{count} files selected" multiple >
-                    <label class="upload-file" for="file">Fazer Upload de Imagem</label>
-                   <!--    <label class="model-image-label" for="file"></label> 
-                    <input class="input-form model-image-input" name="model-image" type="file"
-                    accept="image/*" enctype="multipart/form-data" placeholder=""> --> 
+                    <label class="model-name-label" for="modelurlperson">Modelo para inspiração:</label>
+                    <input class="input-form model-name-input" name="modelurlperson" type="url" placeholder="Colar URL da Imagem">
+                    <input type="file" name="fileperson" id="file" class="inputfile"                      accept="image/*" enctype="multipart/form-data" data-multiple-caption="{count} files selected" multiple >
+                    <label class="upload-file" for="fileperson">Fazer Upload de Imagem</label>
+                   
                 </div>
                 
                 <div class="row available-options">
@@ -70,35 +68,31 @@
                     <div class="woman-measures-1">
                         <div class="field-form bra-size">
                             <label class="bra-label" for="bra">Tamanho do Sutiã:</label>
-                            <input class="input-form small-input"  name="bra" type="text">
+                            <input class="input-form small-input" name="bra" type="text">
                         </div>  
-                        <div class="field-form bra">
-                            <label class="bra-label" for="bra-woman">Medida do Busto:</label>
-                            <input class="input-form small-input" name="bra-woman" type="text" placeholder="">
-                        </div>
-                        <div class="field-form hip">
-                            <label class="hip-label" for="hip-woman">Medida do Quadril:</label>
-                            <input class="input-form small-input" name="hip-woman" type="text" placeholder="">
-                        </div>
-                        <div class="field-form thigh">
-                            <label class="thigh-label" for="hip-woman">Medida da Coxa:</label>
-                            <input class="input-form small-input" name="thigh-woman" type="text" placeholder="">
-                        </div> 
                         <div class="field-form panties">
-                            <label class="panties-label" for="pantiest-woman">Tamanho da Calcinha:</label>
-                            <input class="input-form small-input" name="panties-woman" type="text" placeholder="">
-                        </div>
-                        <div class="field-form sob-bra">
-                            <label class="sob-bra-label" for="sob-bra-woman">Medida do Sob Busto:</label>
-                            <input class="input-form small-input" name="sob-bra-woman" type="text" placeholder="">
-                        </div>
-                        <div class="field-form waist">
-                            <label class="waist-label" for="waist-woman">Medida da Cintura:</label>
-                            <input class="input-form small-input" name="waist-woman" type="text" placeholder="">
+                            <label class="panties-label" for="pantieswoman">Tamanho da Calcinha:</label>
+                            <input class="input-form small-input" name="pantieswoman" type="text" placeholder="">
                         </div>
                         <div class="field-form height">
-                            <label class="height-label" for="height-woman">Altura:</label>
-                            <input class="input-form small-input" name="height-woman" type="text" placeholder="">
+                            <label class="height-label" for="heightwoman">Altura:</label>
+                            <input class="input-form small-input" name="heightwoman" type="text" placeholder="">
+                        </div>
+                        <div class="field-form bra">
+                            <label class="bra-label" for="brawoman">Medida do Busto:</label>
+                            <input class="input-form small-input" name="brawoman" type="text" placeholder="">
+                        </div>
+                        <div class="field-form sob-bra">
+                            <label class="sob-bra-label" for="sobBra">Medida do Sob Busto:</label>
+                            <input class="input-form small-input" name="sobBra" type="text" placeholder="">
+                        </div>
+                        <div class="field-form waist">
+                            <label class="waist-label" for="waistwoman">Medida da Cintura:</label>
+                            <input class="input-form small-input" name="waistwoman" type="text" placeholder="">
+                        </div>
+                        <div class="field-form hip">
+                            <label class="hip-label" for="hipwoman">Medida do Quadril:</label>
+                            <input class="input-form small-input" name="hipwoman" type="text" placeholder="">
                         </div>
                         <div>
                             <p class="text-measures"><em>PARA SABER SEU TAMANHO E COMO TIRAR SUAS MEDIDAS ROLE PARA BAIXO</em></p>
@@ -125,20 +119,20 @@
                 <div class="col ">
                     <div class="man-measures-1">
                         <div class="field-form hip">
-                            <label class="hip-label" for="hip-man">Medida do Quadril:</label>
-                            <input class="input-form small-input" name="hip-man" type="text" placeholder="">
+                            <label class="hip-label" for="hipman">Medida do Quadril:</label>
+                            <input class="input-form small-input" name="hipman" type="text" placeholder="">
                         </div>
                         <div class="field-form thigh">
-                            <label class="thigh-label" for="thigh-man">Medida da Coxa:</label>
-                            <input class="input-form small-input" name="thigh-man" type="text" placeholder="">
+                            <label class="thigh-label" for="thighman">Medida da Coxa:</label>
+                            <input class="input-form small-input" name="thighman" type="text" placeholder="">
                         </div>
                         <div class="field-form waist">
-                            <label class="waist-label" for="waist-man">Medida da Cintura:</label>
-                            <input class="input-form small-input" name="waist-man" type="text" placeholder="">
+                            <label class="waist-label" for="waistman">Medida da Cintura:</label>
+                            <input class="input-form small-input" name="waistman" type="text" placeholder="">
                         </div>
                         <div class="field-form height">
-                            <label class="height-label" for="height-man">Altura:</label>
-                            <input class="input-form small-input" name="height-man" type="text" placeholder="">
+                            <label class="height-label" for="heightman">Altura:</label>
+                            <input class="input-form small-input" name="heightman" type="text" placeholder="">
                         </div>
                         <div>
                             <p class="text-measures"><em>PARA SABER SEU TAMANHO E COMO TIRAR SUAS MEDIDAS ROLE PARA BAIXO</em></p>
