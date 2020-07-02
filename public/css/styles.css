@@ -632,7 +632,7 @@ input[type="search"] {
 .blog{ 
     font-family: var(--ff-roboto);
     font-weight: var(--fw-bold);
-    padding-bottom: 2em;
+    padding-bottom: 4em;
 }
 
 .titles-blog{
@@ -661,7 +661,7 @@ input[type="search"] {
     box-shadow: var(--bs);
 }
 
-hr{ max-width: 15em; }
+hr{ max-width: 20em; }
 
 @media(max-width: 680px){
     .img-blog{

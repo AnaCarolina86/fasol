@@ -34,7 +34,7 @@ const personDataSchema = new mongoose.Schema({
     contactPerson: String,
     urlImagePerson: String,
     imagePerson: String, //I need to change here
-    braPerson: String,
+    braPerson: String, //tamanho do sutiã
     pantiesWomanPerson: String,
     heightWomanPerson: Number,
     braWomanPerson: Number,
@@ -71,12 +71,11 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+/* -----General Routes----- */
 app.get("/", function(req, res){
 
     res.render("home");  
 });
-
-/* -----General Routes----- */
 
 app.get("/nossa-historia", function(req, res){
     res.render("nossa-historia");
@@ -103,6 +102,7 @@ app.get("/personalizado", function(req, res){
 });
 
 app.post("/personalizado", function(req, res){
+    
     const newPerson = new Person({
         namePerson: req.body.nameperson,
         emailPerson: req.body.emailperson,
@@ -213,24 +213,36 @@ app.post("/login", function(req, res){
 
 /* -----Blog Routes----- */
 // Compose : create new posts
+ 
+app.route("/compose")
+    .post(function(req, res){
   
-app.post("/compose", function(req, res){
-  
-    const post = new Post({
-      title: req.body.postTitle,
-      subtitle: req.body.postSubtitle,
-      content: req.body.postBody
+        const post = new Post({
+        title: req.body.postTitle,
+        subtitle: req.body.postSubtitle,
+        content: req.body.postBody
+        });
+        
+        post.save(function(err){
+        if(!err){
+            res.redirect("/");
+        }
+        else{
+            console.log(err);
+        }
+        });    
     });
-    
-    post.save(function(err){
-      if(!err){
-        res.redirect("/");
-      }
-      else{
-          console.log(err);
-      }
-    });    
-});
+
+/* -----Acess Client info Routes----- */
+app.get("/clientMessage", function(req, res){
+    res.render("clientMessage", 
+    {contacts: contacts});
+})
+
+app.get("/clientRequest", function(req, res){
+    res.render("clientRequest",
+    {people: people});
+})
 
 
 app.listen(process.env.PORT || 3000, function() {

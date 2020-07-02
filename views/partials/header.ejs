@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171060247-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-171060247-1');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FaSol</title>
 
     <!-- Font Awesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+    <script src="https://kit.fontawesome.com/fbef9c9588.js" crossorigin="anonymous"></script>
+    
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="shortcut icon" href="images/fasol-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/fasol-logo.png" default-src=none type="image/x-icon">
     
     <!--Fonts-->
     <!-- <link rel="stylesheet" href="https://use.typekit.net/rce5skz.css"> -->
@@ -59,8 +68,10 @@
                 class="btn btn-outline-primary btn-label"> Blog</button></a>
             <a class="btn-link" href="/contato"><button type="button" 
                 class="btn btn-outline-primary btn-label"> Contato</button></a>
-            <input class="input-button btn-link" type="search" name="search" 
-                placeholder= "O que procura?"> 
+            <form role="search">
+                <input class="input-button btn-link" type="search" name="search" 
+                placeholder= "O que procura?" aria-label="Search through site content">
+            </form>
                         
         </div>
 
