@@ -695,6 +695,16 @@ hr{ max-width: 20em; }
     border: dotted .5rem var(--clr-orange);
 }
 
+.client-btn{
+    width: fit-content;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.client-btn:hover{
+    background-color: var(--clr-light-blue);
+}
+
 /* Contact Styles */
 .contact{ padding-bottom: 3em;}
 

@@ -102,7 +102,7 @@ app.get("/personalizado", function(req, res){
 });
 
 app.post("/personalizado", function(req, res){
-    
+
     const newPerson = new Person({
         namePerson: req.body.nameperson,
         emailPerson: req.body.emailperson,
@@ -235,14 +235,20 @@ app.route("/compose")
 
 /* -----Acess Client info Routes----- */
 app.get("/clientMessage", function(req, res){
-    res.render("clientMessage", 
-    {contacts: contacts});
-})
+
+    Contact.find({}, function(err, contacts){
+        res.render("clientMessage", 
+        {contacts: contacts});
+    });
+});
 
 app.get("/clientRequest", function(req, res){
-    res.render("clientRequest",
-    {people: people});
-})
+
+    Person.find({}, function(err, people){
+        res.render("clientRequest",
+        {people: people});
+    });
+});
 
 
 app.listen(process.env.PORT || 3000, function() {
