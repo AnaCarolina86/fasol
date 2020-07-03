@@ -201,7 +201,7 @@ app.post("/login", function(req, res){
         else{
             if(foundUser.password === password){
                 if(foundUser.username === "admin"){
-                    res.render("compose");
+                    res.render("admin");
                 }
                 else{
                     res.render("home");
@@ -212,9 +212,12 @@ app.post("/login", function(req, res){
 });
 
 /* -----Blog Routes----- */
-// Compose : create new posts
- 
+// Compose : create new posts, delete, and update
+// Target: all posts 
 app.route("/compose")
+    .get(function(req, res){
+        res.render("compose");
+    })
     .post(function(req, res){
   
         const post = new Post({
@@ -231,21 +234,33 @@ app.route("/compose")
             console.log(err);
         }
         });    
-    });
+    })
+    .delete(function(req,res){
+        Post.deleteMany(function(err){
+            if(!err){
+                res.send("Successfully deleted all posts.");
+            }
+            else{
+                res.send(err);
+            }
+        });
+});
+
+// Target: one post
 
 /* -----Acess Client info Routes----- */
-app.get("/clientMessage", function(req, res){
+app.get("/clientmessage", function(req, res){
 
     Contact.find({}, function(err, contacts){
-        res.render("clientMessage", 
+        res.render("clientmessage", 
         {contacts: contacts});
     });
 });
 
-app.get("/clientRequest", function(req, res){
+app.get("/clientrequest", function(req, res){
 
     Person.find({}, function(err, people){
-        res.render("clientRequest",
+        res.render("clientrequest",
         {people: people});
     });
 });

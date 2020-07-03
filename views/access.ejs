@@ -6,8 +6,34 @@
             <h1 class="display-3">Registre-se ou faça o login</h1>
 
             <a class="btn btn-dark btn-lg access" href="/register" role="button">Register</a>
-            <a class="btn btn-dark btn-lg access" href="/login" role="button">Login</a>
+            <!-- <a class="btn btn-dark btn-lg access" href="/login" role="button">Login</a> -->
         </div>
+
+        <div class="row login-section">
+            <div class="col-sm-8">
+              <div class="card">
+                <div class="card-body">
+        
+                  <!-- Makes POST request to /login route -->
+                  <form action="/login" method="POST">
+                    <h1>Login</h1>
+                    <div class="form-group">
+                      <label for="userName">Nome de Usuário</label>
+                      <input type="text" class="form-control" name="userName">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Senha</label>
+                      <input type="password" class="form-control" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-dark access">Login</button>
+                  </form>
+        
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </div>
     
 <%- include("partials/footer"); -%>

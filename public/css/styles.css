@@ -151,6 +151,11 @@ input[type="search"] {
     color: var(--clr-light);
 }
 
+.btn-admin{
+    width: fit-content;
+    margin: .4em;
+}
+
 /* Styles for the Header Section */
 
 .header{
@@ -795,6 +800,10 @@ hr{ max-width: 20em; }
     margin-bottom: 1em;
 }
 
+.login-section{
+    margin-top: 2em;
+}
+
 /* Footer Styles */
 
 footer{   
@@ -816,7 +825,7 @@ footer{
     position: relative;
     text-align: center; 
     width: 10rem;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 1rem auto;
 }
 
 .social-icon{
