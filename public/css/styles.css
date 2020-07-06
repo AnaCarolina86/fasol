@@ -307,6 +307,8 @@ input[type="search"] {
 
 .title-home{
     width: max-content;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 4em;  
     box-shadow: var(--bs);  
     font-weight: var(--fw-extra-bold);
@@ -710,7 +712,7 @@ hr{ max-width: 20em; }
     background-color: var(--clr-light-blue);
 }
 
-/* Contact Styles */
+/* Contato Page Styles */
 .contact{ padding-bottom: 3em;}
 
 .title-contact{ 
@@ -748,7 +750,6 @@ hr{ max-width: 20em; }
 .text-contact{
     font-size: var(--fs-h3);
     text-align: left;
-    width: 23em;
     background-color: var(--clr-light-yellow);
     border: none;
     border-radius: 12px;
@@ -774,7 +775,7 @@ hr{ max-width: 20em; }
 @media(max-width: 810px){
     .input-contact, .text-contact{
         width: 18em;
-        margin-right: 1em;
+        margin-right: 1.5em;
     }
     .wrap-media{
         margin-left: 2em;

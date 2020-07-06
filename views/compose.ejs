@@ -19,15 +19,16 @@
         </form>     
         
     </section>
-    <section class="client-info">
-        <form class="form-blog" action="/clientmessage" method="GET">
-            <button class="btn compose-btn client-btn" type="submit">Ver Mensagens</button>
-        </form>
+    <section class="update-blog">
 
-        <form class="form-blog" action="/clientrequest" method="GET">
-            <button class="btn compose-btn client-btn" type="submit">Ver Pedidos</button>
-        </form>
 
+    </section>
+    <section class="delete-blog">
+        <h1>Danger Zone!</h1>
+        <form class="form-blog" action="/compose" method="delete">
+            <button type="submit" class="btn btn-dark access">Deletar Todos</button>
+        </form>
+        
     </section>
 
 <%- include("partials/footer"); -%>    

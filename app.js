@@ -186,6 +186,17 @@ app.post("/register", function(req, res){
 });
 
 /* -----Login Routes----- */
+let userAdmin = false;
+
+function checkAuth(req, res, next) {
+    if (!userAdmin) {
+      res.render("home");
+    } 
+    else {
+      next();
+    }
+}
+
 app.get("/login", function(req, res){
     res.render("login");
 });
@@ -201,7 +212,8 @@ app.post("/login", function(req, res){
         else{
             if(foundUser.password === password){
                 if(foundUser.username === "admin"){
-                    res.render("admin");
+                    userAdmin = true;
+                    res.redirect("admin");
                 }
                 else{
                     res.render("home");
@@ -209,6 +221,15 @@ app.post("/login", function(req, res){
             }
         }
     });
+});
+
+app.get('/logout', function (req, res) {
+    userAdmin = false;
+    res.render('home');
+});  
+
+app.get("/admin", checkAuth, function(req, res){
+    res.render("admin");
 });
 
 /* -----Blog Routes----- */
