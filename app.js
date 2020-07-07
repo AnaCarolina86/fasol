@@ -219,6 +219,9 @@ app.post("/login", function(req, res){
                     res.render("home");
                 }               
             }
+            else{
+                res.send("Ops... try again");
+            }
         }
     });
 });
@@ -270,7 +273,7 @@ app.route("/compose")
 // Target: one post
 
 /* -----Acess Client info Routes----- */
-app.get("/clientmessage", function(req, res){
+app.get("/clientmessage",checkAuth, function(req, res){
 
     Contact.find({}, function(err, contacts){
         res.render("clientmessage", 
