@@ -213,7 +213,7 @@ app.post("/login", function(req, res){
             if(foundUser.password === password){
                 if(foundUser.username === "admin"){
                     userAdmin = true;
-                    res.redirect("admin");
+                    res.render("admin");
                 }
                 else{
                     res.render("home");
