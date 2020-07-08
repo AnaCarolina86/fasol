@@ -15,4 +15,57 @@
         </div>
     </div>
 
+     <section class="client-request-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Pedidos dos Clientes S2</h1>
+                 <%   people.forEach(function(person){ %>
+                        <div class="client">
+                            <h2>Nome: <%=person.clientsRequest.namePerson%></h2>
+                            <h3>Email: <%=person.emailPerson%> </h3>
+                            <h3>Contato: <%=person.contactPerson%></h3>
+                            <h3>URL de Referência: <%=person.urlImagePerson%></h3>
+                            <p>Imagem: <%=person.imagePerson%></p>
+                            <h3>Tamanho do Sutiã: <%=person.braPerson%></h3>
+                            <h3>Tamanho da Calcinha: <%=person.pantiesWomanPerson%></h3>
+                            <h3>Altura da mulher: <%=person.heightWomanPerson%></h3>
+                            <h3>Medida do busto: <%=person.braWomanPerson%></h3>
+                            <h3>Medida sob o busto: <%=person.sobBraPerson%></h3>
+                            <h3>Medida da Cintura: <%=person.waistWomanPerson%></h3>
+                            <h3>Medida do Quadril: <%=person.hipWomanPerson%></h3>
+                            <h3>Medida do Quadril (Homem): <%=person.hipManPerson%></h3>
+                            <h3>Medida da Coxa: <%=person.thighManPerson%></h3>
+                            <h3>Medida da Cintura: <%=person.waistManPerson%></h3>
+                            <h3>Altura (Homem): <%=person.heightManPerson%></h3>
+                            <hr>
+                        </div>
+                <%    });   %>
+                </div>
+    
+            </div>
+        </div>
+    </section> 
+
+    <section class="client-contact-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Mensagens dos Clientes S2</h1>
+                 <%   people.forEach(function(contact){ %>
+                        <div class="client">
+                            <h2>Nome: <%=contact.clientsMessage.nameContact%></h2>
+                            <h3>Email: <%=contact.emailContact%> </h3>
+                            <h3>Contato: <%=contact.phoneNumberContact%></h3>
+                            <h3>Assunto: <%=contact.subjectContact%></h3>
+                            <p>Mensagem: <%=contact.textContact%></p>
+                            <hr>
+                        </div>
+                <%    });   %>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 <%- include("partials/footer"); -%>

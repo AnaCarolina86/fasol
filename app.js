@@ -59,9 +59,17 @@ const contactSchema = new mongoose.Schema({
     textContact: String
 });
 
-//Model Contact
+// Model Contact
 const Contact = new mongoose.model("Contact", contactSchema);
 
+// Schema Client
+const clientSchema = new mongoose.Schema({
+    clientsRequest: [{type: personDataSchema, ref: 'Person'}],
+    clientsMessage: [{type: contactSchema, ref: 'Contact'}]
+});
+
+// Model Client
+const Client = new mongoose.model("Client", clientSchema);
 
 /* -----App Settings----- */
 
@@ -213,7 +221,7 @@ app.post("/login", function(req, res){
             if(foundUser.password === password){
                 if(foundUser.username === "admin"){
                     userAdmin = true;
-                    res.render("admin");
+                    res.redirect("admin");
                 }
                 else{
                     res.render("home");
@@ -232,8 +240,19 @@ app.get('/logout', function (req, res) {
 });  
 
 app.get("/admin", checkAuth, function(req, res){
-    res.render("admin");
+
+    Client.find({}, function(err, clients){
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.render("admin", {people: clients});
+        }
+        
+    });
+    
 });
+
 
 /* -----Blog Routes----- */
 // Compose : create new posts, delete, and update
@@ -273,13 +292,7 @@ app.route("/compose")
 // Target: one post
 
 /* -----Acess Client info Routes----- */
-app.get("/clientmessage",checkAuth, function(req, res){
 
-    Contact.find({}, function(err, contacts){
-        res.render("clientmessage", 
-        {contacts: contacts});
-    });
-});
 
 app.get("/clientrequest", function(req, res){
 
