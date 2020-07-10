@@ -62,15 +62,6 @@ const contactSchema = new mongoose.Schema({
 // Model Contact
 const Contact = new mongoose.model("Contact", contactSchema);
 
-// Schema Client
-const clientSchema = new mongoose.Schema({
-    clientsRequest: [{type: personDataSchema, ref: 'Person'}],
-    clientsMessage: [{type: contactSchema, ref: 'Contact'}]
-});
-
-// Model Client
-const Client = new mongoose.model("Client", clientSchema);
-
 /* -----App Settings----- */
 
 const app = express();
@@ -110,7 +101,6 @@ app.get("/personalizado", function(req, res){
 });
 
 app.post("/personalizado", function(req, res){
-
     const newPerson = new Person({
         namePerson: req.body.nameperson,
         emailPerson: req.body.emailperson,
@@ -129,7 +119,7 @@ app.post("/personalizado", function(req, res){
         waistManPerson: req.body.waistman,
         heightManPerson: req.body.heightman
     });
-
+     
     newPerson.save(function(err){
         if(err){
             console.log(err);
@@ -146,7 +136,6 @@ app.get("/contato", function(req, res){
 });
 
 app.post("/contato", function(req, res){
-    
     const newContact = new Contact({
         nameContact: req.body.namecontact,
         emailContact: req.body.emailcontact,
@@ -241,14 +230,20 @@ app.get('/logout', function (req, res) {
 
 app.get("/admin", checkAuth, function(req, res){
 
-    Client.find({}, function(err, clients){
+    Contact.find({}, function(err, contacts){
         if(err){
             console.log(err);
         }
         else{
-            res.render("admin", {people: clients});
-        }
-        
+            Person.find({}, function(err, people){
+                if(err){
+                    console.log(err);
+                }
+                else{
+                    res.render("admin", {people1: people, people2: contacts});         
+                }
+            });             
+        }        
     });
     
 });
