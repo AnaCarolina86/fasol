@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
 const md5 = require("md5");
+const multer = require("multer");
 
 /* -----DataBase----- */
 const mongoose = require("mongoose");
@@ -27,13 +28,26 @@ const userSchema = new mongoose.Schema({
 // Model Login
 const User = new mongoose.model("User", userSchema);
 
+// Schema Image
+const imageSchema = new mongoose.Schema({ 
+    name: String, 
+    desc: String, 
+    img: 
+    { 
+        data: Buffer, 
+        contentType: String 
+    } 
+}); 
+//Model Image
+const Image = new mongoose.model("Image", imageSchema);
+
 // Schema Personalizado Data
 const personDataSchema = new mongoose.Schema({
     namePerson: String,
     emailPerson: String,
     contactPerson: String,
     urlImagePerson: String,
-    imagePerson: String, //I need to change here
+    imagePerson: {type: imageSchema, ref: Image},
     braPerson: String, //tamanho do sutiã
     pantiesWomanPerson: String,
     heightWomanPerson: Number,
