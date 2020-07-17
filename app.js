@@ -86,7 +86,6 @@ app.use(express.static("public"));
 
 /* -----General Routes----- */
 app.get("/", function(req, res){
-
     res.render("home");  
 });
 
@@ -299,17 +298,6 @@ app.route("/compose")
 });
 
 // Target: one post
-
-/* -----Acess Client info Routes----- */
-
-
-app.get("/clientrequest", function(req, res){
-
-    Person.find({}, function(err, people){
-        res.render("clientrequest",
-        {people: people});
-    });
-});
 
 
 app.listen(process.env.PORT || 3000, function() {

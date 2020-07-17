@@ -397,11 +397,17 @@ input[type="search"] {
 .bikini-item{ 
     overflow: hidden;
     margin-bottom: 1.5em;
- }
+}
 
 .bikini-img{ 
     width: 55%; 
     margin: 0 auto .5em auto;
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.bikini-img:hover,
+.bikini-item:focus .bikini-img{
+    transform: scale(1.15);
 }
 
 .client-options{

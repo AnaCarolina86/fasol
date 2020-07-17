@@ -13,22 +13,4 @@ navLinks.forEach(link => {
     });
 });
 
-/* ---Personalizado Page--- */
-
-
-/* ---Personalizado Page--- */
-
-/* const radioMan = document.getElementById('man');
-const radioWoman = document.getElementById('woman');
-const womanMeasures = document.getElementById('woman-measures');
-const manMeasures = document.getElementById('man-measures');
-
-radioMan.addEventListener('click', () => {
-    manMeasures.classList.add('input-open');
-    womanMeasures.classList.remove('input-open');
-});
-
-radioWoman.addEventListener('click', () => {
-    womanMeasures.classList.add('input-open');
-    manMeasures.classList.remove('input-open');
-}); */
+/* --Bikini Page--- */
