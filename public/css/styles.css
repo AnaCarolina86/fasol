@@ -368,7 +368,6 @@ input[type="search"] {
     background-color: var(--clr-light-yellow);
     border: solid .75rem var(--clr-blue);
     margin: 0.5em;
-    margin-right: 4em;
 }
 
 .fatima-label{
@@ -784,6 +783,7 @@ hr{ max-width: 20em; }
 .input-contact{
     width: 22.5em;
     height: 2em;
+    padding-left: 0.5em;
 }
 
 .text-contact{
@@ -795,6 +795,7 @@ hr{ max-width: 20em; }
     color: var(--clr-blue);
     margin-bottom: 1em;   
     width: 15em;
+    padding-left: 0.5em;
 }
 
 .label-space{ margin-right: 2em; }
@@ -802,16 +803,22 @@ hr{ max-width: 20em; }
 .media-contact{
     position: relative;
     margin: 0 auto 0 auto;
-
 }
 
 .wrap-media{ 
     display: inline-block;
     position: relative;
     margin: 2em auto 2em auto;
-    width: 24em;
+    width: 35em;
     top: 7.5em;
+    
 }
+
+ul{ list-style: none; }
+
+li{ margin-bottom: 1em; }
+
+ul li::before { content: "\200B"; } /* Accessibility concerns 810px */
 
 .info-contact{ margin-left: 1em; }
 
@@ -820,7 +827,11 @@ hr{ max-width: 20em; }
     color: var(--clr-blue);
 }
 
-@media(max-width: 810px){
+.fasol-media:hover{
+    color: var(--clr-yellow);
+}
+
+@media(max-width: 1115px){
     .input-contact{
         width: 18em;
         margin-right: 1.5em;
