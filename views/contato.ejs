@@ -3,47 +3,50 @@
     <section class="contact">
         <div class="container-fluid">
         
-        <div class="row">
-            <div class="col-sm-6">
-                <h2 class="title-contact">Fale Conosco</h2>
-                <form action="/contato" method="POST" class="form-contact">
-                    <input type="text" name="namecontact" placeholder="Nome" 
-                        class="input-contact name-contact">
-                    <input type="email" name="emailcontact" placeholder="E-mail" 
-                        class="input-contact email-contact">
-                    <input type="text" name="numbercontact" placeholder="Telefone" 
-                        class="input-contact number-contact">
-                    <input type="text" name="subjectcontact" placeholder="Assunto" 
-                        class="input-contact subject-contact">
-                    <textarea name="messagecontact" class="text-contact" rows="7" > Mensagem
-                    </textarea>
-                    <button type="submit" class="btn send-form">Enviar</button>
-                </form>
-            </div>
-            <div class="col-sm-6">
-                <div class="wrap-media">
-                    <div class="adress info-contact">
-                        <h3 class="">Endereço</h3>
-                        <p>Rua Egito, 97 - Copacabana - Belo Horizonte/MG</p>
-                    </div>
-                    <div class="email-fasol info-contact">
-                        <h3 class="">E-mail</h3>
-                        <p><i class="fas fa-at"></i> fasoalheiro@gmail.com</p>
-                    </div>
-                    <div class="whatsapp info-contact">
-                        <h3>Whatsapp</h3>
-                        <p><i class="fab fa-whatsapp"></i> (31) 97348-8605</p>
-                    </div>
-                    <div class="social-media info-contact">
-                        <h3>Redes Sociais</h3>
-                        <a class="" href="https://www.instagram.com/fasol_modapraia/"><i 
-                            class="fab fa-instagram"></i> Instagram</a><br>
-                        <a class="" href="https://www.facebook.com/FaSoalheiro/"><i 
-                            class="fab fa-facebook"></i> Facebook</a>
-                    </div>
-                </div>               
-            </div>
-        </div>        
+            <div class="row">
+                <div class="col-sm-6">
+                    
+                    <form action="/contato" method="POST" class="form-contact">
+                        <h1 class="title-contact">Fale Conosco</h1>
+                        <label for="namecontact" class="label-space"><h3>Nome  </h3></label>
+                        <input type="text" name="namecontact" class="input-contact name-contact" required>
+                        <label for="emailcontact" class="label-space"><h3>Email  </h3></label>
+                        <input type="email" name="emailcontact" class="input-contact email-contact">
+                        <label for="numbercontact"><h3>Telefone</h3></label>
+                        <input type="text" name="numbercontact" class="input-contact number-contact">
+                        <label for="subjectcontact"><h3>Assunto</h3></label>
+                        <input type="text" name="subjectcontact" class="input-contact subject-contact">
+                        <label for="messagecontact"><h3>Mensagem</h3></label>
+                        <textarea name="messagecontact" class="text-contact" rows="7" required></textarea>
+                        <button type="submit" class="btn send-form">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <section class="media-contact">
+                        <div class="wrap-media">
+                            <div class="adress info-contact">
+                                <h3 class="">Endereço</h3>
+                                <p>Rua Egito, 97 - Copacabana - Belo Horizonte/MG</p>
+                            </div>
+                            <div class="email-fasol info-contact">
+                                <h3 class="">E-mail</h3>
+                                <p><i class="fas fa-at"></i> fasoalheiro@gmail.com</p>
+                            </div>
+                            <div class="whatsapp info-contact">
+                                <h3>Whatsapp</h3>
+                                <p><i class="fab fa-whatsapp"></i> (31) 97348-8605</p>
+                            </div>
+                            <div class="social-media info-contact">
+                                <h3>Redes Sociais</h3>
+                                <a class="" href="https://www.instagram.com/fasol_modapraia/"><i 
+                                    class="fab fa-instagram"></i> Instagram</a><br>
+                                <a class="" href="https://www.facebook.com/FaSoalheiro/"><i 
+                                    class="fab fa-facebook"></i> Facebook</a>
+                            </div>
+                        </div>
+                    </section>               
+                </div>
+            </div>        
         </div>
     </section>
 

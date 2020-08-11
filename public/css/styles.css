@@ -351,20 +351,44 @@ input[type="search"] {
     margin: 2em;
 }
 
-.image-history{
-    width: 250px;
-    height: 400px;
+.colunm-align{
+    margin-right: auto;
+}
+
+.picture{
+    position: relative;
+    float: left;
+    width: fit-content;
+    margin-right: 2rem;
+}
+
+.fatima-pic{
+    position: relative;
+    width: 300px;
     background-color: var(--clr-light-yellow);
     border: solid .75rem var(--clr-blue);
     margin: 0.5em;
-    position: absolute;
+    margin-right: 4em;
+}
+
+.fatima-label{
+    position: relative;
+    width: fit-content;
+    font-size: var(--fs-h3);    
+    margin: 0 auto 0 auto;
+}
+
+.box-text{
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-left: 1em;
 }
 
 .text-history{
     position: relative;
-    left: 20rem;
-    margin: 1rem;
-    width: 70%;
+    width: 90%;
+    text-align: left;
     font-family: var(--ff-montserrat);
     font-weight: var(--fw-bold);
     font-style: italic;
@@ -372,10 +396,24 @@ input[type="search"] {
 }
 
 .paragraph-history{
-    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     font-size: 2.25rem;
-    word-spacing: 0.3rem;
+    word-spacing: 0.2rem;
+    word-break: keep-all;
 }
+
+@media(max-width: 760px){
+    .colunm-align, .fatima-pic{
+        margin: 0 auto 0 auto;
+    }
+    .box-text{
+        margin: 0;
+        margin-top: 2em;
+        text-align: center;
+    }
+    
+} 
 
 /* Moda Praia Styles */
 .beach-section{
@@ -723,7 +761,8 @@ hr{ max-width: 20em; }
 .contact{ padding-bottom: 3em;}
 
 .title-contact{ 
-    margin: 2em; 
+    margin-top: 2em;
+    margin-bottom: 1em; 
     width: 10em;
 }
 
@@ -742,15 +781,8 @@ hr{ max-width: 20em; }
     margin-bottom: 1em;
 }
 
-.input-contact::placeholder{
-    color: var(--clr-blue);
-    font-size: var(--fs-h3);
-    text-align: left;
-    text-indent: 0.5em;
-}
-
 .input-contact{
-    width: 23em;
+    width: 22.5em;
     height: 2em;
 }
 
@@ -763,6 +795,14 @@ hr{ max-width: 20em; }
     color: var(--clr-blue);
     margin-bottom: 1em;   
     width: 15em;
+}
+
+.label-space{ margin-right: 2em; }
+
+.media-contact{
+    position: relative;
+    margin: 0 auto 0 auto;
+
 }
 
 .wrap-media{ 
@@ -797,7 +837,7 @@ hr{ max-width: 20em; }
 
 @media(max-width: 600px){    
     .form-contact{
-        width: 20em;
+        width: 18em;
         left: 1em;
     }
     .wrap-media{
