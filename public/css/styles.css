@@ -687,7 +687,7 @@ input[type="search"] {
 }
 
 .titles-blog{   
-    margin: 3.5em 0 2em 0;
+    margin: 4.5em auto 3.5em auto;
     text-align: center;
 }
 
@@ -703,8 +703,8 @@ input[type="search"] {
 
 .box-image-blog{
     position: relative;
-    margin: 2em auto 2em auto;
-    width: 25em;
+    margin: 2.5em auto 3em auto;
+    width: 30em;
 }
 
 .image-blog{  width: 100%; }
@@ -712,13 +712,22 @@ input[type="search"] {
 .section-blog{
     width: 70%;
     color: var(--clr-light-blue);
-    margin: 1em auto 1em auto;
+    margin: 2em auto 2em auto;
     text-align: justify;
     line-height: 1.6;
 }
 
-.images-blog{
-    
+.bikini1940{
+    position: relative;
+    float: right;
+    margin-right: 4em;    
+}
+
+.bikini1940-2{ margin-left: 4em; }
+
+.images1950{
+    position: relative;
+    margin: 2em auto 2em auto;
 }
 
 @media(max-width: 680px){
